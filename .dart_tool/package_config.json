@@ -128,6 +128,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "system_design_package",
+      "rootUri": "../packages/system_design",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "term_glyph",
       "rootUri": "file:///Users/coordenacaobcc/.puro/shared/pub_cache/hosted/pub.dev/term_glyph-1.2.1",
       "packageUri": "lib/",
@@ -152,7 +158,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2023-08-30T23:42:09.518778Z",
+  "generated": "2023-08-31T00:42:58.788724Z",
   "generator": "pub",
   "generatorVersion": "3.0.2"
 }
