@@ -1,3 +1,4 @@
 library system_design_package;
 
-export 'src/enuns/system_icons.dart';
+export 'src/enuns/enuns.dart';
+export 'src/text/system_font.dart';
