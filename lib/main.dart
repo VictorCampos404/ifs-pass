@@ -43,16 +43,14 @@ class _MyHomePageState extends State<MyHomePage> {
           child: SingleChildScrollView(
             child: Container(
               padding: const EdgeInsets.all(16),
-              child: Column(
+              child: const Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Container(
-                    width: 200,
-                    height: 200,
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: SystemShadow100().value),
-                  )
+                  SystemIcon(
+                    SystemIcons.home_6_fill,
+                    color: SystemColors.negative,
+                    size: SystemSize.extraLarge,
+                  ),
                 ],
               ),
             ),
@@ -62,7 +60,9 @@ class _MyHomePageState extends State<MyHomePage> {
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: Icon(SystemIcons.a_b.value),
+        child: Icon(
+          SystemIcons.home_6_fill.value,
+        ),
       ),
     );
   }

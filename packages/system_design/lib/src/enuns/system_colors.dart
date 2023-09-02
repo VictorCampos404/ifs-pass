@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
-import 'package:system_design_package/src/colors/custom_colors.dart';
+import 'package:system_design_package/src/consts/colors/custom_colors.dart';
 
-enum SystemColors{
+enum SystemColors {
   primary(value: CustomColors.primary),
   neutral50(value: CustomColors.neutral50),
   neutral200(value: CustomColors.neutral200),

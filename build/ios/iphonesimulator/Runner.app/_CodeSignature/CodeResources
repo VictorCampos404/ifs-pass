@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		Z1XXi1acIG0Rhvjqegpox2oFYNQ=
+		msPGDhmn5GQVCPQ+sgWSdduEvvI=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,19 +54,19 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		qKhz00GfTIdoqX5w+5u/WsEfcW8=
+		pSnZCwPc+lSGzuso92z61t42BmE=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		DShS3K1h9sc9b3VkhOFkiCx14rg=
+		fEN1BxbhccRo5zxzME4VWfXrSpE=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.smcbin</key>
 		<data>
-		BzNz7RQupUix2kFrQoCoIcxJwzY=
+		zUHrX73b9tcwZySHApobcFpgtgA=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
-		R3SeNGXL+valpRMor3Zu+PnNi88=
+		6HQqFsHx0azHTf+6WJJoJcgll5k=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
@@ -82,11 +82,23 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		jALv79UWZJF2BvIPAJhVGL3NqCk=
+		QGdC48S/iKAn0+tmJw9dY+0YKAY=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
 		P7bb/oR3EhwqCIH1M6LyTuBIWYU=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/system_design/lib/src/assets/fonts/Inter-Medium.ttf</key>
+		<data>
+		pBiounO7z6jBMcQmq4NteEV6+ps=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/system_design/lib/src/assets/fonts/Inter-Regular.ttf</key>
+		<data>
+		cjfZz1Xxd3AgZqKKTd4eTH6KtXY=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/packages/system_design/lib/src/assets/fonts/Inter-SemiBold.ttf</key>
+		<data>
+		QxAH2jFt5g2FF0ruybg4m1xz59Y=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/system_design_package/lib/src/assets/fonts/CustomIcons.ttf</key>
 		<data>
@@ -269,7 +281,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OR8J4XjMIkGytBvN2XrO5aSBV9C1UqsRFS4W5BPjir4=
+			86dEzDpCGPLSBTnDqil4hbz5BmRPx8mwRos977zucJw=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -283,28 +295,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Cac2yYBow1xRHVVRzb0kWgOTS/ru8mN361NaDuntAKk=
+			svaFCP1G1grbpX9a22cYm51ZejrMQ/hrU0RuJqourLQ=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			2uF71MD7bjZlgnFx6wR+Zs6nmpymY9guid8JSXghECk=
+			TxLJAx11S4vhPz1KEiMB5n2aFsnDpAkEINPsheHHIh4=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.smcbin</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PlcsQoSaMU77QxOa+2fNAlvNVsaB8avSJF0kCBY8s5A=
+			OggThDx9d/hf8Hdg4ihrp3/r9qTEnNANlS8S2cQ5kCg=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZrhVpV8Q+K1gzEf0Wj/e6UDK9y49FkqD10N0J68lNyc=
+			kT0yQKzUinX1oCV1LjCNqF9BhXB89Jzeo5c+q8yUVio=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
@@ -332,7 +344,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1k/pT2WR3YvjvZ8HHTOb3KvOdGq1hrM0iDpIOPPbUzo=
+			tDdwW0utomOZjBmgoPnBuCIy1XCgWBfS70o3VFt1Vj4=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -340,6 +352,27 @@
 			<key>hash2</key>
 			<data>
 			x6NX+tjyECiQtyzbbjyY8U2zoZ7GDbJtE+T+k/dzgI0=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/system_design/lib/src/assets/fonts/Inter-Medium.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ENSDMfWzxzYso1ewDBesSGOtNRmbE7Ds6wliyMGtfck=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/system_design/lib/src/assets/fonts/Inter-Regular.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			QasPcHor+rgTPM382rUigvX3nldR9DomSAVFHHu5X7g=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/packages/system_design/lib/src/assets/fonts/Inter-SemiBold.ttf</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			6MvCuIvEJoI3/14lF3bTxU7csU4BWp5m5Ig73ktV8T8=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/system_design_package/lib/src/assets/fonts/CustomIcons.ttf</key>
