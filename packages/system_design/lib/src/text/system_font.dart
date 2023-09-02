@@ -119,8 +119,7 @@ extension SystemFont on Text{
   }
 
   Text body1({TextStyle? style, SystemFontWeight? fontWeight, SystemTextDecoration? decoration}) {
-    //Body1 não pode ser semiBold
-    assert(fontWeight != SystemFontWeight.semiBold);
+    assert(fontWeight != SystemFontWeight.semiBold, "Esse estilo de fonte não suporta o SystemFontWeight.semiBold");
 
     final defaultStyle = TextStyle(
       decoration: decoration?.value ?? SystemTextDecoration.none.value,
@@ -139,8 +138,7 @@ extension SystemFont on Text{
   }
 
   Text body2({TextStyle? style, SystemFontWeight? fontWeight, SystemTextDecoration? decoration}) {
-    //Body1 não pode ser semiBold
-    assert(fontWeight != SystemFontWeight.semiBold);
+    assert(fontWeight != SystemFontWeight.semiBold, "Esse estilo de fonte não suporta o SystemFontWeight.semiBold");
 
     final defaultStyle = TextStyle(
       decoration: decoration?.value ?? SystemTextDecoration.none.value,
