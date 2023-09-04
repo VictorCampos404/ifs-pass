@@ -29,8 +29,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  void _incrementCounter() {}
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,25 +41,46 @@ class _MyHomePageState extends State<MyHomePage> {
           child: SingleChildScrollView(
             child: Container(
               padding: const EdgeInsets.all(16),
-              child: const Column(
+              child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  SystemIcon(
-                    SystemIcons.home_6_fill,
-                    color: SystemColors.negative,
-                    size: SystemSize.extraLarge,
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 16),
+                    child: SystemPrimaryButton(
+                      text: "Button",
+                      size: SystemSize.extraLarge,
+                      expanded: false,
+                      //enable: false,
+                      //loading: true,
+                      onTap: () {
+                        print("oi");
+                      },
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 16),
+                    child: SystemPrimaryButton(
+                      text: "Button",
+                      size: SystemSize.large,
+                      onTap: () {},
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 16),
+                    child: SystemPrimaryButton(
+                      text: "Button",
+                      onTap: () {},
+                    ),
+                  ),
+                  SystemPrimaryButton(
+                    text: "Button",
+                    size: SystemSize.small,
+                    onTap: () {},
                   ),
                 ],
               ),
             ),
           ),
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(
-          SystemIcons.home_6_fill.value,
         ),
       ),
     );

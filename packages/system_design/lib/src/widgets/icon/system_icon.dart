@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:system_design_package/src/consts/sizes/icon_size.dart';
+import 'package:system_design_package/src/consts/sizes/widgets_size.dart';
 import 'package:system_design_package/system_design.dart';
 
 class SystemIcon extends StatelessWidget {
