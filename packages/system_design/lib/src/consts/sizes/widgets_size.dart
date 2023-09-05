@@ -38,3 +38,18 @@ class ButtonSize {
     }
   }
 }
+
+class IconButtonSize {
+  static EdgeInsets converter(SystemSize size) {
+    switch (size) {
+      case SystemSize.extraLarge:
+        return EdgeInsets.all(SystemSpacing.x1_5.value);
+      case SystemSize.large:
+        return EdgeInsets.all(SystemSpacing.x1_5.value);
+      case SystemSize.medium:
+        return EdgeInsets.all(SystemSpacing.x1.value);
+      case SystemSize.small:
+        return EdgeInsets.all(SystemSpacing.x1.value);
+    }
+  }
+}

@@ -44,12 +44,13 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  SystemIcon(SystemIcons.home_6_fill, size: SystemSize.large),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 16),
-                    child: SystemPrimaryButton(
-                      text: "Button",
-                      size: SystemSize.extraLarge,
-                      expanded: false,
+                    child: SystemIconButton(
+                      size: SystemSize.medium,
+                      icon: SystemIcons.picture_in_picture_exit_fill,
+
                       //enable: false,
                       //loading: true,
                       onTap: () {
