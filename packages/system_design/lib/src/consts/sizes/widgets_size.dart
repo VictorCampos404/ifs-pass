@@ -53,3 +53,18 @@ class IconButtonSize {
     }
   }
 }
+
+class IndicatorSize {
+  static double converter(SystemSize size) {
+    switch (size) {
+      case SystemSize.extraLarge:
+        return 20;
+      case SystemSize.large:
+        return 12;
+      case SystemSize.medium:
+        return 8;
+      case SystemSize.small:
+        return 8;
+    }
+  }
+}

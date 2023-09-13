@@ -44,6 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+                  SystemIndicator(),
                   SystemIcon(SystemIcons.home_6_fill, size: SystemSize.large),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 16),
