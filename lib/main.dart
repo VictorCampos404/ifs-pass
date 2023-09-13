@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   Padding(
                     padding: const EdgeInsets.only(bottom: 16),
                     child: SystemIconButton(
-                      size: SystemSize.medium,
+                      size: SystemSize.small,
                       icon: SystemIcons.picture_in_picture_exit_fill,
 
                       //enable: false,

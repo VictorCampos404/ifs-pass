@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:system_design_package/src/consts/shadows/system_shadows.dart';
 import 'package:system_design_package/src/consts/sizes/widgets_size.dart';
 import 'package:system_design_package/system_design.dart';
 
@@ -29,28 +30,23 @@ class SystemIconButton extends StatelessWidget {
         duration: Duration(milliseconds: 500),
         curve: Curves.easeInOut,
         opacity: (enable ?? true) ? 1 : 0.12,
-        child: ElevatedButton(
-            onPressed: onTap,
-            style: ButtonStyle(
-              fixedSize: MaterialStateProperty.all(Size.zero),
-              backgroundColor: MaterialStateProperty.all(
-                  backgroundColor?.value ?? SystemColors.primary.value),
-              padding: MaterialStateProperty.all(
-                  IconButtonSize.converter(size ?? SystemSize.medium)),
-              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-              elevation: MaterialStateProperty.all(1),
-              shadowColor:
-                  MaterialStateProperty.all(SystemColors.neutral800.value),
-              shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(8))),
-            ),
-            child: (loading ?? false)
-                ? CircularProgressIndicator(
-                    color: iconColor?.value ?? SystemColors.white.value,
-                    strokeWidth: 2,
-                  )
-                : SystemIcon(icon,
-                    color: iconColor ?? SystemColors.white, size: size)),
+        child: GestureDetector(
+          onTap: onTap,
+          child: Container(
+              padding: IconButtonSize.converter(size ?? SystemSize.medium),
+              decoration: BoxDecoration(
+                color: backgroundColor?.value ?? SystemColors.primary.value,
+                borderRadius: BorderRadius.all(Radius.circular(8)),
+                boxShadow: SystemShadow100().value,
+              ),
+              child: (loading ?? false)
+                  ? CircularProgressIndicator(
+                      color: iconColor?.value ?? SystemColors.white.value,
+                      strokeWidth: 2,
+                    )
+                  : SystemIcon(icon,
+                      color: iconColor ?? SystemColors.white, size: size)),
+        ),
       ),
     );
   }
