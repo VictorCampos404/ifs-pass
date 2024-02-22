@@ -19,7 +19,11 @@
 		<key>Assets.car</key>
 		<data>
 <<<<<<< HEAD
+<<<<<<< HEAD
 		fU8Tyoh0z9uLOv0OIKa8oiszDDA=
+=======
+		So4xOyMLfZ5FM7BwTxSImjFKs+Q=
+>>>>>>> 41214d78bfab45dc775f0fa0c63a3b72db47c941
 =======
 		So4xOyMLfZ5FM7BwTxSImjFKs+Q=
 >>>>>>> 41214d78bfab45dc775f0fa0c63a3b72db47c941
@@ -51,7 +55,11 @@
 		<key>Frameworks/App.framework/App</key>
 		<data>
 <<<<<<< HEAD
+<<<<<<< HEAD
 		YidC7gRadhKZOUGB+PnW3MMJ+YQ=
+=======
+		0bU//XYOdjfxEBhFRrkf+2DnQ4o=
+>>>>>>> 41214d78bfab45dc775f0fa0c63a3b72db47c941
 =======
 		0bU//XYOdjfxEBhFRrkf+2DnQ4o=
 >>>>>>> 41214d78bfab45dc775f0fa0c63a3b72db47c941
@@ -63,13 +71,19 @@
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
 <<<<<<< HEAD
+<<<<<<< HEAD
 		8CEFMA8wdUG0wrMn20jxwzTcjmE=
 =======
+=======
+>>>>>>> 41214d78bfab45dc775f0fa0c63a3b72db47c941
 		WXrwrKXpoussTprSpVWrE2fdehM=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.bin</key>
 		<data>
 		D4t1oJa2SIjMVz5+7Dy3F6M0dxc=
+<<<<<<< HEAD
+>>>>>>> 41214d78bfab45dc775f0fa0c63a3b72db47c941
+=======
 >>>>>>> 41214d78bfab45dc775f0fa0c63a3b72db47c941
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
@@ -103,7 +117,11 @@
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
 <<<<<<< HEAD
+<<<<<<< HEAD
 		Odo1iSFfFDm5FGiLOdZqn88kboE=
+=======
+		YFgZkcsMrc4KtYFxYVAaYONMx2I=
+>>>>>>> 41214d78bfab45dc775f0fa0c63a3b72db47c941
 =======
 		YFgZkcsMrc4KtYFxYVAaYONMx2I=
 >>>>>>> 41214d78bfab45dc775f0fa0c63a3b72db47c941
@@ -257,7 +275,11 @@
 			<key>hash2</key>
 			<data>
 <<<<<<< HEAD
+<<<<<<< HEAD
 			u+33u+K2xHRx3G8kr71Vhz4wsDojWJMpnnEPxWoEh+E=
+=======
+			howXkgIdJ2aqiuKUsQru0w7W1os+4zHueoEFqwm8HzY=
+>>>>>>> 41214d78bfab45dc775f0fa0c63a3b72db47c941
 =======
 			howXkgIdJ2aqiuKUsQru0w7W1os+4zHueoEFqwm8HzY=
 >>>>>>> 41214d78bfab45dc775f0fa0c63a3b72db47c941
@@ -310,7 +332,11 @@
 			<key>hash2</key>
 			<data>
 <<<<<<< HEAD
+<<<<<<< HEAD
 			5U2Qfy6AXgUIxmiKRrn/P/eCZgsr1nKoVMmvM+3MLDQ=
+=======
+			fOd0HFKg8xyOstlK4Lezg/Is9K9jsG1VZjFu0IO5oNQ=
+>>>>>>> 41214d78bfab45dc775f0fa0c63a3b72db47c941
 =======
 			fOd0HFKg8xyOstlK4Lezg/Is9K9jsG1VZjFu0IO5oNQ=
 >>>>>>> 41214d78bfab45dc775f0fa0c63a3b72db47c941
@@ -328,8 +354,11 @@
 			<key>hash2</key>
 			<data>
 <<<<<<< HEAD
+<<<<<<< HEAD
 			TOt+YsV5af2XoEyaQmINThOzKyPJx/2Dmbp+c/tzvhw=
 =======
+=======
+>>>>>>> 41214d78bfab45dc775f0fa0c63a3b72db47c941
 			yl3xzmyRftuSEwkOviniP5TNgN1Db1PqjeKg3gXc/P8=
 			</data>
 		</dict>
@@ -338,6 +367,9 @@
 			<key>hash2</key>
 			<data>
 			rxlUUqEBr9JaC6jMj1FHbtFpkw9+hiD175sni78C4KM=
+<<<<<<< HEAD
+>>>>>>> 41214d78bfab45dc775f0fa0c63a3b72db47c941
+=======
 >>>>>>> 41214d78bfab45dc775f0fa0c63a3b72db47c941
 			</data>
 		</dict>
@@ -395,7 +427,11 @@
 			<key>hash2</key>
 			<data>
 <<<<<<< HEAD
+<<<<<<< HEAD
 			IKz+EEP3PfDSyhWeII/AG/2JKaox/BD5NVWgGLW3XYo=
+=======
+			Pr1P2kg6YZdIQhRB/VOiCwg2pw09jrwegrFSNrFnlAg=
+>>>>>>> 41214d78bfab45dc775f0fa0c63a3b72db47c941
 =======
 			Pr1P2kg6YZdIQhRB/VOiCwg2pw09jrwegrFSNrFnlAg=
 >>>>>>> 41214d78bfab45dc775f0fa0c63a3b72db47c941
