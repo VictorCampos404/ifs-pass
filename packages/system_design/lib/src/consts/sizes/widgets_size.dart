@@ -38,3 +38,33 @@ class ButtonSize {
     }
   }
 }
+
+class IconButtonSize {
+  static EdgeInsets converter(SystemSize size) {
+    switch (size) {
+      case SystemSize.extraLarge:
+        return EdgeInsets.all(SystemSpacing.x1_5.value);
+      case SystemSize.large:
+        return EdgeInsets.all(SystemSpacing.x1_5.value);
+      case SystemSize.medium:
+        return EdgeInsets.all(SystemSpacing.x1.value);
+      case SystemSize.small:
+        return EdgeInsets.all(SystemSpacing.x1.value);
+    }
+  }
+}
+
+class IndicatorSize {
+  static double converter(SystemSize size) {
+    switch (size) {
+      case SystemSize.extraLarge:
+        return 20;
+      case SystemSize.large:
+        return 12;
+      case SystemSize.medium:
+        return 8;
+      case SystemSize.small:
+        return 8;
+    }
+  }
+}
