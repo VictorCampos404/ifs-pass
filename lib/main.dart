@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
@@ -29,59 +30,43 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  bool locked = true;
+
+  void changeLocked() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: SafeArea(
-        child: Center(
-          child: SingleChildScrollView(
-            child: Container(
+      body: Stack(
+        children: [
+          Positioned.fill(
+            child: Image.asset(
+              CustomImages.background,
+              fit: BoxFit.cover,
+            ),
+          ),
+          SafeArea(
+            child: Padding(
               padding: const EdgeInsets.all(16),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 16),
-                    child: SystemPrimaryButton(
-                      text: "Button",
-                      size: SystemSize.extraLarge,
-                      expanded: false,
-                      //enable: false,
-                      //loading: true,
-                      onTap: () {
-                        print("oi");
-                      },
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  GlassContainer(
+                    duration: const Duration(milliseconds: 1000),
+                    padding: const EdgeInsets.all(16),
+                    child: Center(
+                      child: const Text(
+                        'Bem-vindo Victor!',
+                      ).heading3(
+                          color: SystemColors.white,
+                          fontWeight: SystemFontWeight.semiBold),
                     ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 16),
-                    child: SystemPrimaryButton(
-                      text: "Button",
-                      size: SystemSize.large,
-                      onTap: () {},
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 16),
-                    child: SystemPrimaryButton(
-                      text: "Button",
-                      onTap: () {},
-                    ),
-                  ),
-                  SystemPrimaryButton(
-                    text: "Button",
-                    size: SystemSize.small,
-                    onTap: () {},
                   ),
                 ],
               ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }
