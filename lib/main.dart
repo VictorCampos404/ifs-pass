@@ -54,14 +54,29 @@ class _MyHomePageState extends State<MyHomePage> {
                   GlassContainer(
                     duration: const Duration(milliseconds: 1000),
                     padding: const EdgeInsets.all(16),
-                    child: Center(
-                      child: const Text(
-                        'Bem-vindo Victor!',
-                      ).heading3(
-                          color: SystemColors.white,
-                          fontWeight: SystemFontWeight.semiBold),
+                    child: Row(
+                      children: [
+                        if(1 != 2)...[
+                          Padding(
+                            padding: EdgeInsets.only(
+                              right: SystemSpacing.x2.value
+                            ),
+                            child: const SystemAvatar(
+                              size: SystemSize.medium,
+                              imageUrl: 'https://img.freepik.com/fotos-gratis/close-no-homem-sorrindo-na-natureza_23-2150771075.jpg',
+                            ),
+                          ),
+                          const Text(
+                            'Bem-vindo Victor!',
+                          ).heading3(
+                              color: SystemColors.white,
+                              fontWeight: SystemFontWeight.semiBold),
+                          ],
+                      ],
                     ),
                   ),
+
+                  
                 ],
               ),
             ),
