@@ -83,3 +83,18 @@ class AvatarSize {
     }
   }
 }
+
+class AvatarIndicatorPosition {
+  static double converter(SystemSize size) {
+    switch (size) {
+      case SystemSize.extraLarge:
+        return 45;
+      case SystemSize.large:
+        return 43;
+      case SystemSize.medium:
+        return 39;
+      case SystemSize.small:
+        return 32;
+    }
+  }
+}

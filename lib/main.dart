@@ -56,14 +56,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     padding: const EdgeInsets.all(16),
                     child: Row(
                       children: [
-                        if(1 != 2)...[
+                        if (1 != 2) ...[
                           Padding(
-                            padding: EdgeInsets.only(
-                              right: SystemSpacing.x2.value
-                            ),
+                            padding:
+                                EdgeInsets.only(right: SystemSpacing.x2.value),
                             child: const SystemAvatar(
                               size: SystemSize.medium,
-                              imageUrl: 'https://img.freepik.com/fotos-gratis/close-no-homem-sorrindo-na-natureza_23-2150771075.jpg',
+                              imageUrl:
+                                  'https://img.freepik.com/fotos-gratis/close-no-homem-sorrindo-na-natureza_23-2150771075.jpg',
                             ),
                           ),
                           const Text(
@@ -71,12 +71,19 @@ class _MyHomePageState extends State<MyHomePage> {
                           ).heading3(
                               color: SystemColors.white,
                               fontWeight: SystemFontWeight.semiBold),
-                          ],
+                        ],
                       ],
                     ),
                   ),
-
-                  
+                  const Padding(
+                    padding: const EdgeInsets.all(150.0),
+                    child: const SystemAvatar(
+                      size: SystemSize.medium,
+                      imageUrl:
+                          'https://img.freepik.com/fotos-gratis/close-no-homem-sorrindo-na-natureza_23-2150771075.jpg',
+                      indicatorColor: SystemColors.neutral400,
+                    ),
+                  ),
                 ],
               ),
             ),

@@ -6,16 +6,18 @@ import 'package:system_design_package/system_design.dart';
 class SystemAvatar extends StatelessWidget {
   final SystemSize? size;
   final String? imageUrl;
+  final SystemColors? indicatorColor;
+
   const SystemAvatar({
     super.key,
     this.size,
     this.imageUrl,
+    this.indicatorColor,
   });
 
   @override
   Widget build(BuildContext context) {
-
-    if(imageUrl == null){
+    if (imageUrl == null) {
       return Container(
         width: AvatarSize.converter(size ?? SystemSize.medium),
         height: AvatarSize.converter(size ?? SystemSize.medium),
@@ -34,25 +36,36 @@ class SystemAvatar extends StatelessWidget {
       );
     }
 
-    return Container(
-      width: AvatarSize.converter(size ?? SystemSize.medium),
-      height: AvatarSize.converter(size ?? SystemSize.medium),
-      decoration: BoxDecoration(
-        color: SystemColors.neutral200.value,
-        border: Border.all(
-          color: SystemColors.white.value,
+    return Stack(
+      children: <Widget>[
+        Container(
+          width: AvatarSize.converter(size ?? SystemSize.medium),
+          height: AvatarSize.converter(size ?? SystemSize.medium),
+          decoration: BoxDecoration(
+            color: SystemColors.neutral200.value,
+            border: Border.all(
+              color: SystemColors.white.value,
+            ),
+            borderRadius: BorderRadius.circular(150),
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(150),
+            child: CachedNetworkImage(
+              imageUrl: imageUrl!,
+              fit: BoxFit.cover,
+            ),
+          ),
         ),
-        borderRadius: BorderRadius.circular(150),
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(150),
-        child: CachedNetworkImage(
-          imageUrl: imageUrl!,
-          fit: BoxFit.cover,
-        ),
-      ),
+        Positioned(
+          top: AvatarIndicatorPosition.converter(size ?? SystemSize.medium),
+          left:
+              AvatarIndicatorPosition.converter(size ?? SystemSize.medium) - 5,
+          child: SystemIndicator(
+            color: indicatorColor ?? SystemColors.positive,
+            size: size,
+          ),
+        )
+      ],
     );
-
-
   }
 }
