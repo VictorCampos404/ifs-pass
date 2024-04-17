@@ -1,0 +1,1 @@
+ /Users/coordenacaobcc/Documents/flutter/personal/ifs-pass/.dart_tool/flutter_build/dc8c95a9a8d4badb2dd905f7841d8969/native_assets.yaml: 
