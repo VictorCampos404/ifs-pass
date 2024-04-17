@@ -5,61 +5,16 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "ifs-pass",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "ifs-pass (profile mode)",
+            "name": "Ifsp-ass development",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
+            "program": "lib/main.dart",
         },
         {
-            "name": "ifs-pass (release mode)",
+            "name": "Ifsp-ass production",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "release"
-        },
-        {
-            "name": "system",
-            "cwd": "packages/system",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "system (profile mode)",
-            "cwd": "packages/system",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "system (release mode)",
-            "cwd": "packages/system",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
-        },
-        {
-            "name": "system_design",
-            "cwd": "packages/system_design",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "system_design (profile mode)",
-            "cwd": "packages/system_design",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
-        },
-        {
-            "name": "system_design (release mode)",
-            "cwd": "packages/system_design",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
+            "program": "lib/main.dart",
         }
     ]
 }
