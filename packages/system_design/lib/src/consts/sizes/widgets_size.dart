@@ -60,11 +60,11 @@ class IndicatorSize {
       case SystemSize.extraLarge:
         return 20;
       case SystemSize.large:
-        return 12;
+        return 20;
       case SystemSize.medium:
-        return 8;
+        return 16;
       case SystemSize.small:
-        return 8;
+        return 12;
     }
   }
 }
@@ -80,21 +80,6 @@ class AvatarSize {
         return 48;
       case SystemSize.small:
         return 40;
-    }
-  }
-}
-
-class AvatarIndicatorPosition {
-  static double converter(SystemSize size) {
-    switch (size) {
-      case SystemSize.extraLarge:
-        return 45;
-      case SystemSize.large:
-        return 43;
-      case SystemSize.medium:
-        return 39;
-      case SystemSize.small:
-        return 32;
     }
   }
 }

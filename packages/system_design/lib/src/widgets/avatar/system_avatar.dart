@@ -7,36 +7,49 @@ class SystemAvatar extends StatelessWidget {
   final SystemSize? size;
   final String? imageUrl;
   final SystemColors? indicatorColor;
+  final bool? withIndicator;
 
   const SystemAvatar({
     super.key,
     this.size,
     this.imageUrl,
     this.indicatorColor,
+    this.withIndicator,
   });
 
   @override
   Widget build(BuildContext context) {
     if (imageUrl == null) {
-      return Container(
-        width: AvatarSize.converter(size ?? SystemSize.medium),
-        height: AvatarSize.converter(size ?? SystemSize.medium),
-        decoration: BoxDecoration(
-          color: SystemColors.neutral200.value,
-          border: Border.all(
-            color: SystemColors.white.value,
+      return Stack(
+        alignment: Alignment.bottomRight,
+        children: [
+          Container(
+            width: AvatarSize.converter(size ?? SystemSize.medium),
+            height: AvatarSize.converter(size ?? SystemSize.medium),
+            decoration: BoxDecoration(
+              color: SystemColors.neutral200.value,
+              border: Border.all(
+                color: SystemColors.white.value,
+              ),
+              borderRadius: BorderRadius.circular(150),
+            ),
+            child: SystemIcon(
+              SystemIcons.user_line,
+              size: size,
+              color: SystemColors.neutral600,
+            ),
           ),
-          borderRadius: BorderRadius.circular(150),
-        ),
-        child: SystemIcon(
-          SystemIcons.user_line,
-          size: size,
-          color: SystemColors.neutral600,
-        ),
+          if (withIndicator ?? false)
+            SystemIndicator(
+              color: indicatorColor ?? SystemColors.positive,
+              size: size,
+            )
+        ],
       );
     }
 
     return Stack(
+      alignment: Alignment.bottomRight,
       children: <Widget>[
         Container(
           width: AvatarSize.converter(size ?? SystemSize.medium),
@@ -56,15 +69,11 @@ class SystemAvatar extends StatelessWidget {
             ),
           ),
         ),
-        Positioned(
-          top: AvatarIndicatorPosition.converter(size ?? SystemSize.medium),
-          left:
-              AvatarIndicatorPosition.converter(size ?? SystemSize.medium) - 5,
-          child: SystemIndicator(
+        if (withIndicator ?? false)
+          SystemIndicator(
             color: indicatorColor ?? SystemColors.positive,
             size: size,
-          ),
-        )
+          )
       ],
     );
   }

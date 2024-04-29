@@ -45,7 +45,7 @@
     },
     {
       "name": "collection",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/collection-1.17.2",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/collection-1.18.0",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
@@ -57,9 +57,9 @@
     },
     {
       "name": "cupertino_icons",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/cupertino_icons-1.0.5",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/cupertino_icons-1.0.8",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.1"
     },
     {
       "name": "fake_async",
@@ -69,9 +69,9 @@
     },
     {
       "name": "ffi",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/ffi-2.1.0",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/ffi-2.1.2",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.3"
     },
     {
       "name": "file",
@@ -80,10 +80,16 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "fixnum",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/fixnum-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///Users/bryanribeiro/.puro/envs/tcc/flutter/packages/flutter",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.2"
     },
     {
       "name": "flutter_cache_manager",
@@ -93,27 +99,45 @@
     },
     {
       "name": "flutter_lints",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/flutter_lints-2.0.2",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/flutter_lints-2.0.3",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "2.19"
     },
     {
       "name": "flutter_test",
       "rootUri": "file:///Users/bryanribeiro/.puro/envs/tcc/flutter/packages/flutter_test",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.2"
     },
     {
       "name": "http",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/http-1.1.0",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/http-1.2.1",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.3"
     },
     {
       "name": "http_parser",
       "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/http_parser-4.0.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "leak_tracker",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/leak_tracker-10.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "leak_tracker_flutter_testing",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/leak_tracker_flutter_testing-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
+    },
+    {
+      "name": "leak_tracker_testing",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/leak_tracker_testing-2.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.1"
     },
     {
       "name": "lints",
@@ -123,19 +147,19 @@
     },
     {
       "name": "matcher",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/matcher-0.12.16",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/matcher-0.12.16+1",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.0"
     },
     {
       "name": "material_color_utilities",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/material_color_utilities-0.5.0",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/material_color_utilities-0.8.0",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "meta",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/meta-1.9.1",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/meta-1.11.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -147,21 +171,21 @@
     },
     {
       "name": "path",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/path-1.8.3",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/path-1.9.0",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "3.0"
     },
     {
       "name": "path_provider",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/path_provider-2.1.2",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/path_provider-2.1.3",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.1"
     },
     {
       "name": "path_provider_android",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/path_provider_android-2.2.2",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/path_provider_android-2.2.4",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.2"
     },
     {
       "name": "path_provider_foundation",
@@ -209,7 +233,7 @@
       "name": "sky_engine",
       "rootUri": "file:///Users/bryanribeiro/.puro/envs/tcc/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.2"
     },
     {
       "name": "source_span",
@@ -225,27 +249,27 @@
     },
     {
       "name": "sqflite",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/sqflite-2.3.2",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/sqflite-2.3.3",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.3"
     },
     {
       "name": "sqflite_common",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/sqflite_common-2.5.3",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/sqflite_common-2.5.4",
       "packageUri": "lib/",
-      "languageVersion": "3.0"
+      "languageVersion": "3.3"
     },
     {
       "name": "stack_trace",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/stack_trace-1.11.0",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/stack_trace-1.11.1",
       "packageUri": "lib/",
       "languageVersion": "2.18"
     },
     {
       "name": "stream_channel",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/stream_channel-2.1.1",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/stream_channel-2.1.2",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "2.19"
     },
     {
       "name": "string_scanner",
@@ -273,9 +297,9 @@
     },
     {
       "name": "test_api",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/test_api-0.6.0",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/test_api-0.6.1",
       "packageUri": "lib/",
-      "languageVersion": "2.18"
+      "languageVersion": "3.0"
     },
     {
       "name": "typed_data",
@@ -285,9 +309,9 @@
     },
     {
       "name": "uuid",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/uuid-4.2.2",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/uuid-4.4.0",
       "packageUri": "lib/",
-      "languageVersion": "2.14"
+      "languageVersion": "3.0"
     },
     {
       "name": "vector_math",
@@ -296,16 +320,22 @@
       "languageVersion": "2.14"
     },
     {
-      "name": "web",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/web-0.1.4-beta",
+      "name": "vm_service",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/vm_service-13.0.0",
       "packageUri": "lib/",
-      "languageVersion": "3.1"
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "web",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/web-0.5.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
     },
     {
       "name": "win32",
-      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/win32-5.1.1",
+      "rootUri": "file:///Users/bryanribeiro/.puro/shared/pub_cache/hosted/pub.dev/win32-5.4.0",
       "packageUri": "lib/",
-      "languageVersion": "3.1"
+      "languageVersion": "3.3"
     },
     {
       "name": "xdg_directories",
@@ -314,13 +344,13 @@
       "languageVersion": "3.0"
     },
     {
-      "name": "ifs_pass",
+      "name": "testeexec",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-04-08T12:53:08.547592Z",
+  "generated": "2024-04-29T13:53:29.441861Z",
   "generator": "pub",
-  "generatorVersion": "3.1.0"
+  "generatorVersion": "3.3.0"
 }

@@ -27,7 +27,7 @@ class SystemIconButton extends StatelessWidget {
     return AbsorbPointer(
       absorbing: !(enable ?? true) || (loading ?? false),
       child: AnimatedOpacity(
-        duration: Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 500),
         curve: Curves.easeInOut,
         opacity: (enable ?? true) ? 1 : 0.12,
         child: GestureDetector(
@@ -36,7 +36,7 @@ class SystemIconButton extends StatelessWidget {
               padding: IconButtonSize.converter(size ?? SystemSize.medium),
               decoration: BoxDecoration(
                 color: backgroundColor?.value ?? SystemColors.primary.value,
-                borderRadius: BorderRadius.all(Radius.circular(8)),
+                borderRadius: const BorderRadius.all(Radius.circular(8)),
                 boxShadow: SystemShadow100().value,
               ),
               child: (loading ?? false)

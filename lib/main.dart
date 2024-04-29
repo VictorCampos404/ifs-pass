@@ -78,10 +78,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   const Padding(
                     padding: const EdgeInsets.all(150.0),
                     child: const SystemAvatar(
-                      size: SystemSize.medium,
-                      imageUrl:
-                          'https://img.freepik.com/fotos-gratis/close-no-homem-sorrindo-na-natureza_23-2150771075.jpg',
-                      indicatorColor: SystemColors.neutral400,
+                      size: SystemSize.extraLarge,
+                      // imageUrl:
+                      //     'https://img.freepik.com/fotos-gratis/close-no-homem-sorrindo-na-natureza_23-2150771075.jpg',
+                      indicatorColor: SystemColors.negative,
+                      withIndicator: true,
                     ),
                   ),
                 ],

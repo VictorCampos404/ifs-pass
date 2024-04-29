@@ -27,11 +27,11 @@ class SystemPrimaryButton extends StatelessWidget {
     return AbsorbPointer(
       absorbing: !(enable ?? true) || (loading ?? false),
       child: AnimatedOpacity(
-        duration: Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 500),
         curve: Curves.easeInOut,
         opacity: (enable ?? true) ? 1 : 0.12,
         child: AnimatedContainer(
-          duration: Duration(milliseconds: 500),
+          duration: const Duration(milliseconds: 500),
           curve: Curves.easeInOut,
           width: (expanded ?? false) ? MediaQuery.of(context).size.width : null,
           child: ElevatedButton(
