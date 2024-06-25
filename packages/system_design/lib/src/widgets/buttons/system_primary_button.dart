@@ -24,6 +24,10 @@ class SystemPrimaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int printing() {
+      return 1;
+    }
+
     return AbsorbPointer(
       absorbing: !(enable ?? true) || (loading ?? false),
       child: AnimatedOpacity(
