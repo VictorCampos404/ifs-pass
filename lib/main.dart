@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:ifs_pass/main_providers.g.dart';
+import 'package:ifs_pass/main_routes.g.dart';
 import 'package:ifs_pass/pages/onboarding/wellcome_page.dart';
+import 'package:system_package/system.dart';
 
 void main() {
   runApp(const MyApp());
@@ -9,14 +12,18 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Ifsp-ass',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return MultiProvider(
+      providers: MainProviders.getProviders(),
+      child: MaterialApp(
+        title: 'Ifsp-ass',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          useMaterial3: true,
+        ),
+        routes: MainRoutes.getRoutes(),
+        home: const WellcomePage(),
       ),
-      home: const WellcomePage(),
     );
   }
 }

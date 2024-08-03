@@ -158,6 +158,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "nested",
+      "rootUri": "file:///C:/Users/Campos/.puro/shared/pub_cache/hosted/pub.dev/nested-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "octo_image",
       "rootUri": "file:///C:/Users/Campos/.puro/shared/pub_cache/hosted/pub.dev/octo_image-2.0.0",
       "packageUri": "lib/",
@@ -216,6 +222,12 @@
       "rootUri": "file:///C:/Users/Campos/.puro/shared/pub_cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "provider",
+      "rootUri": "file:///C:/Users/Campos/.puro/shared/pub_cache/hosted/pub.dev/provider-6.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "rxdart",
@@ -284,6 +296,12 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "system_package",
+      "rootUri": "../packages/system",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
       "name": "term_glyph",
       "rootUri": "file:///C:/Users/Campos/.puro/shared/pub_cache/hosted/pub.dev/term_glyph-1.2.1",
       "packageUri": "lib/",
@@ -338,7 +356,7 @@
       "languageVersion": "3.0"
     }
   ],
-  "generated": "2024-06-21T12:20:03.964709Z",
+  "generated": "2024-06-22T15:53:05.073379Z",
   "generator": "pub",
   "generatorVersion": "3.3.0"
 }

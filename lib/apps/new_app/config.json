@@ -1,7 +1,0 @@
-{
-    "name": "New app",
-    "systemName": "new_app",
-    "icon": "path/path/image.png",
-    "color": "3142341234",
-    "startRoute": "new_app-home"
-}

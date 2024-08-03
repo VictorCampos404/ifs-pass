@@ -106,6 +106,10 @@ meta
 2.12
 file:///C:/Users/Campos/.puro/shared/pub_cache/hosted/pub.dev/meta-1.11.0/
 file:///C:/Users/Campos/.puro/shared/pub_cache/hosted/pub.dev/meta-1.11.0/lib/
+nested
+2.12
+file:///C:/Users/Campos/.puro/shared/pub_cache/hosted/pub.dev/nested-1.0.0/
+file:///C:/Users/Campos/.puro/shared/pub_cache/hosted/pub.dev/nested-1.0.0/lib/
 octo_image
 2.12
 file:///C:/Users/Campos/.puro/shared/pub_cache/hosted/pub.dev/octo_image-2.0.0/
@@ -146,6 +150,10 @@ plugin_platform_interface
 3.0
 file:///C:/Users/Campos/.puro/shared/pub_cache/hosted/pub.dev/plugin_platform_interface-2.1.8/
 file:///C:/Users/Campos/.puro/shared/pub_cache/hosted/pub.dev/plugin_platform_interface-2.1.8/lib/
+provider
+2.12
+file:///C:/Users/Campos/.puro/shared/pub_cache/hosted/pub.dev/provider-6.1.2/
+file:///C:/Users/Campos/.puro/shared/pub_cache/hosted/pub.dev/provider-6.1.2/lib/
 rxdart
 2.12
 file:///C:/Users/Campos/.puro/shared/pub_cache/hosted/pub.dev/rxdart-0.27.7/
@@ -218,6 +226,10 @@ ifs_pass
 3.0
 file:///C:/Users/Campos/Documents/flutter/personal/ifs-pass/
 file:///C:/Users/Campos/Documents/flutter/personal/ifs-pass/lib/
+system_package
+3.0
+file:///C:/Users/Campos/Documents/flutter/personal/ifs-pass/packages/system/
+file:///C:/Users/Campos/Documents/flutter/personal/ifs-pass/packages/system/lib/
 system_design_package
 3.0
 file:///C:/Users/Campos/Documents/flutter/personal/ifs-pass/packages/system_design/

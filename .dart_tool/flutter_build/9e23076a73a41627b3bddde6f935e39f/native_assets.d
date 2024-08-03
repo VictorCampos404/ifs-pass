@@ -1,0 +1,1 @@
+ C:\\Users\\Campos\\Documents\\flutter\\personal\\ifs-pass\\.dart_tool\\flutter_build\\9e23076a73a41627b3bddde6f935e39f\\native_assets.yaml: 

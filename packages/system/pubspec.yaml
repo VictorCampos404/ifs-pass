@@ -2,7 +2,7 @@ name: system_package
 description: A new Flutter package project.
 version: 0.0.1
 publish_to: none
-homepage:
+homepage: <4.0.0
 
 environment:
   sdk: '>=3.0.2 <4.0.0'
@@ -11,6 +11,10 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  provider: ^6.1.2
+  dio: ^5.5.0+1
+  shared_preferences: ^2.2.3
+  permission_handler: ^11.3.1
 
 dev_dependencies:
   flutter_test:
