@@ -17,6 +17,8 @@ INJECTED from C:\Users\Campos\Documents\flutter\personal\ifs-pass\android\app\sr
 INJECTED from C:\Users\Campos\Documents\flutter\personal\ifs-pass\android\app\src\main\AndroidManifest.xml:1:1-33:12
 INJECTED from C:\Users\Campos\Documents\flutter\personal\ifs-pass\android\app\src\main\AndroidManifest.xml:1:1-33:12
 MERGED from C:\Users\Campos\Documents\flutter\personal\ifs-pass\android\app\src\main\AndroidManifest.xml:1:1-33:12
+MERGED from [:shared_preferences_android] C:\Users\Campos\Documents\flutter\personal\ifs-pass\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
+MERGED from [:permission_handler_android] C:\Users\Campos\Documents\flutter\personal\ifs-pass\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:sqflite] C:\Users\Campos\Documents\flutter\personal\ifs-pass\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [:path_provider_android] C:\Users\Campos\Documents\flutter\personal\ifs-pass\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] C:\Users\Campos\.gradle\caches\transforms-3\ae81e06d24c799147c26814497a2a305\transformed\jetified-window-java-1.0.0-beta04\AndroidManifest.xml:17:1-23:12
@@ -57,6 +59,10 @@ uses-sdk
 INJECTED from C:\Users\Campos\Documents\flutter\personal\ifs-pass\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\Campos\Documents\flutter\personal\ifs-pass\android\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\Campos\Documents\flutter\personal\ifs-pass\android\app\src\main\AndroidManifest.xml
+MERGED from [:shared_preferences_android] C:\Users\Campos\Documents\flutter\personal\ifs-pass\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] C:\Users\Campos\Documents\flutter\personal\ifs-pass\build\shared_preferences_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:permission_handler_android] C:\Users\Campos\Documents\flutter\personal\ifs-pass\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
+MERGED from [:permission_handler_android] C:\Users\Campos\Documents\flutter\personal\ifs-pass\build\permission_handler_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:sqflite] C:\Users\Campos\Documents\flutter\personal\ifs-pass\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:sqflite] C:\Users\Campos\Documents\flutter\personal\ifs-pass\build\sqflite\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:path_provider_android] C:\Users\Campos\Documents\flutter\personal\ifs-pass\build\path_provider_android\intermediates\merged_manifest\debug\AndroidManifest.xml:5:5-7:41

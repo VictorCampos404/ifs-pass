@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   system_design_package:
     path: 'packages/system_design'
+  system_package:
+    path: 'packages/system'
 
 dev_dependencies:
   flutter_test:

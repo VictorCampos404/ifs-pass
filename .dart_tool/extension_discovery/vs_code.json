@@ -1,1 +1,20 @@
-{"version":2,"entries":[{"package":"system_design_package","rootUri":"../packages/system_design/","packageUri":"lib/"},{"package":"ifs_pass","rootUri":"../","packageUri":"lib/"}]}
+{
+    "version": 2,
+    "entries": [
+        {
+            "package": "system_design_package",
+            "rootUri": "../packages/system_design/",
+            "packageUri": "lib/"
+        },
+        {
+            "package": "system_package",
+            "rootUri": "../packages/system/",
+            "packageUri": "lib/"
+        },
+        {
+            "package": "ifs_pass",
+            "rootUri": "../",
+            "packageUri": "lib/"
+        }
+    ]
+}
