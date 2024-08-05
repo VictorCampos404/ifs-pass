@@ -4,13 +4,7 @@ import 'package:ifs_pass/apps/new_app/pages/home/controller/new_app_home_control
 import 'package:ifs_pass/apps/new_app/pages/home/view/new_app_home_page.dart';
 import 'package:system_package/system.dart';
 
-abstract class AppModule{
-  List<SingleChildWidget> get providers;
-  Map<String, Widget Function(BuildContext)> get routes;
-  late String name;
-}
-
-class NewAppModule implements AppModule{
+class NewAppModule implements SystemAppModule{
   @override
   List<SingleChildWidget> get providers => [
     ChangeNotifierProvider(
@@ -22,9 +16,20 @@ class NewAppModule implements AppModule{
   Map<String, Widget Function(BuildContext)> get routes => {
     NewAppRoutes.home: (context) => const NewAppHomePage(),
   };
+
+  @override
+  String id = 'new_app';
   
   @override
-  String name = 'new_app';
-  
+  String name = 'New App';
 
+  @override
+  String startRoute = NewAppRoutes.home;
+  
+  @override
+  bool active = true;
+  
+  @override
+  bool canDisable = true;
+  
 }

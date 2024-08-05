@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ifs_pass/main_providers.g.dart';
-import 'package:ifs_pass/main_routes.g.dart';
+import 'package:ifs_pass/main_module.dart';
 import 'package:ifs_pass/pages/onboarding/wellcome_page.dart';
 import 'package:system_package/system.dart';
 
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: MainProviders.getProviders(),
+      providers: MainModule.getProviders(),
       child: MaterialApp(
         title: 'Ifsp-ass',
         debugShowCheckedModeBanner: false,
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        routes: MainRoutes.getRoutes(),
+        routes: MainModule.getRoutes(),
         home: const WellcomePage(),
       ),
     );
