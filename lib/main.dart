@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:ifs_pass/pages/onboarding/confirm_pin_page.dart';
+import 'package:ifs_pass/pages/onboarding/pin_page.dart';
+import 'package:ifs_pass/pages/onboarding/wallpaper_page.dart';
 import 'package:ifs_pass/pages/onboarding/wellcome_page.dart';
 import 'package:ifs_pass/pages/onboarding/login_page.dart';
+import 'package:ifs_pass/pages/onboarding/consent_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginPage(),
+      home: ConfirmPinPage(),
     );
   }
 }
