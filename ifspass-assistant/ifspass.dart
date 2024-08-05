@@ -1,3 +1,4 @@
+import 'commands/build.dart';
 import 'commands/create.dart';
 
 main(List<String> arguments){
@@ -19,6 +20,14 @@ main(List<String> arguments){
       final name = arguments[1];
       
       createCommand.run(name);
+    break;
+
+    case 'build': 
+      
+      final buildCommand = BuildCommand();
+
+      buildCommand.run();
+
     break;
   }
 
