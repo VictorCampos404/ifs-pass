@@ -1,6 +1,6 @@
 import 'dart:io';
 
-class BuildAppData{
+class BuildAppData {
   final String path;
   final String name;
 
@@ -12,33 +12,33 @@ class BuildAppData{
 
 class BuildCommand {
   run() async {
-    
-    final dir = Directory('..\\lib\\apps');
-    final appsModules = File('..\\lib\\apps_modules.g.dart');
+    final slash = Platform.isWindows ? '\\' : '/';
+
+    final dir = Directory('..${slash}lib${slash}apps');
+    final appsModules = File('..${slash}lib${slash}apps_modules.g.dart');
     final buildApps = <BuildAppData>[];
 
-    try{
-
+    try {
       final apps = await dir.list().toList();
 
       print('Lendo apps...');
 
-      for(final app in apps){
-        final module = File('${app.path}\\module.dart');
+      for (final app in apps) {
+        final module = File('${app.path}${slash}module.dart');
 
-        if(module.existsSync()){
+        if (module.existsSync()) {
           final lines = module.readAsLinesSync();
 
-          final nameLine = lines.where((line) => line.startsWith('class')).toString();
+          final nameLine =
+              lines.where((line) => line.startsWith('class')).toString();
           final words = nameLine.split(' ');
 
-          if(words.length >= 2){
-
-            final folders = module.path.split('\\');
+          if (words.length >= 2) {
+            final folders = module.path.split(slash);
 
             String path = 'import \'package:ifs_pass';
 
-            for(int i = 2; i < folders.length; i++){
+            for (int i = 2; i < folders.length; i++) {
               path += '/${folders[i]}';
             }
 
@@ -46,7 +46,7 @@ class BuildCommand {
 
             buildApps.add(
               BuildAppData(
-                path: path, 
+                path: path,
                 name: '  ${words[1]}(),',
               ),
             );
@@ -54,43 +54,38 @@ class BuildCommand {
         }
       }
 
-      if(appsModules.existsSync()){
+      if (appsModules.existsSync()) {
         await appsModules.delete();
         print('Arquivo apps_modules.g.dart deletado...');
       }
 
       await appsModules.create();
 
-      String linesFile = 
-        '//\n'
-        '// NÃO EDITAR, ARQUIVO GERADO POR CÓDIGO\n'
-        '//\n'
-        '\n'
-        'import \'package:system_package/system.dart\';\n';
+      String linesFile = '//\n'
+          '// NÃO EDITAR, ARQUIVO GERADO POR CÓDIGO\n'
+          '//\n'
+          '\n'
+          'import \'package:system_package/system.dart\';\n';
 
-      for(final buildApp in buildApps){
+      for (final buildApp in buildApps) {
         linesFile += '${buildApp.path}\n';
       }
 
-      linesFile += 
-        '\n'
-        'List<SystemAppModule> get APP_MODULES => [\n';
-      
-      for(final buildApp in buildApps){
+      linesFile += '\n'
+          'List<SystemAppModule> get APP_MODULES => [\n';
+
+      for (final buildApp in buildApps) {
         linesFile += '${buildApp.name}\n';
       }
 
-      linesFile += 
-        '];'
-        '\n';
+      linesFile += '];'
+          '\n';
 
       appsModules.writeAsString(linesFile);
 
       print('Arquivo apps_modules.g.dart criado...');
-
-    }catch(error){
+    } catch (error) {
       print(error);
     }
-
   }
 }
