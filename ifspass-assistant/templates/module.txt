@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+import 'package:system_package/system.dart';
+import 'package:ifs_pass/apps/{app_id}/consts/routes.dart';
+import 'package:ifs_pass/apps/{app_id}/pages/home/controller/home_controller.dart';
+import 'package:ifs_pass/apps/{app_id}/pages/home/view/home_page.dart';
+
+class {app_name}Module implements SystemAppModule {
+  @override
+  List<SingleChildWidget> get providers => [
+        ChangeNotifierProvider(
+          create: (_) => {app_name}HomeController(),
+        ),
+      ];
+
+  @override
+  Map<String, Widget Function(BuildContext)> get routes => {
+        {app_name}Routes.home: (context) => const {app_name}HomePage(),
+      };
+
+  @override
+  String get id => '{app_id}';
+
+  @override
+  String get name => '{app_name}';
+
+  @override
+  String get startRoute => {app_name}Routes.home;
+
+  @override
+  bool get active => true;
+
+  @override
+  bool get canDisable => true;
+}

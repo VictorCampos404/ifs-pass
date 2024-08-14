@@ -1,0 +1,3 @@
+class {app_name}Routes{
+  static String home = '{app_id}-home';
+}

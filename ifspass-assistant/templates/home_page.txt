@@ -1,22 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:ifs_pass/apps/new_app/pages/home/controller/new_app_home_controller.dart';
 import 'package:system_package/system.dart';
 import 'package:system_design_package/system_design.dart';
+import 'package:ifs_pass/apps/{app_id}/pages/home/controller/home_controller.dart';
 
-class NewAppHomePage extends StatelessWidget {
-  const NewAppHomePage({super.key});
+class {app_name}HomePage extends StatelessWidget {
+  const {app_name}HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<NewAppHomeController>(
+    return Consumer<{app_name}HomeController>(
       builder: (context, controller, child) {
         return Scaffold(
           body: Center(
             child: Text(
               '${controller.count}',
-              style: const TextStyle(
-                fontSize: 24
-              ),
+              style: const TextStyle(fontSize: 24),
             ),
           ),
           floatingActionButton: FloatingActionButton(
@@ -24,7 +22,7 @@ class NewAppHomePage extends StatelessWidget {
               SystemIcons.add_fill.value,
               color: SystemColors.white.value,
             ),
-            onPressed: (){
+            onPressed: () {
               controller.addOne();
             },
           ),
