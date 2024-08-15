@@ -11,6 +11,9 @@ class NewAppHomePage extends StatelessWidget {
     return Consumer<NewAppHomeController>(
       builder: (context, controller, child) {
         return Scaffold(
+          appBar: AppBar(
+            title: const Text('NewApp'),
+          ),
           body: Center(
             child: Text(
               '${controller.count}',

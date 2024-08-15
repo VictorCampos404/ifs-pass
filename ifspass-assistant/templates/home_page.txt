@@ -11,6 +11,9 @@ class {app_name}HomePage extends StatelessWidget {
     return Consumer<{app_name}HomeController>(
       builder: (context, controller, child) {
         return Scaffold(
+          appBar: AppBar(
+            title: const Text('{app_name}'),
+          ),
           body: Center(
             child: Text(
               '${controller.count}',
