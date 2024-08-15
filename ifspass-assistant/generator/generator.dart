@@ -9,7 +9,9 @@ class Generator {
     required Map<KeyType, String> keys,
     required String path,
   }) async {
-    final templateFile = File(fileType.path);
+    final templateFile = File(
+      fileType.path
+    );
     final lines = templateFile.readAsLinesSync();
     String fileString = '';
 
@@ -17,7 +19,6 @@ class Generator {
       for (int i = 0; i < lines.length; i++) {
         if (lines[i].contains(key.value)) {
           lines[i] = lines[i].replaceAll(key.value, value);
-          print(lines[i]);
         }
       }
     });

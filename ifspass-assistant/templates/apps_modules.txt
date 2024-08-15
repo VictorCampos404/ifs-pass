@@ -6,5 +6,5 @@ import 'package:system_package/system.dart';
 {imports}
 
 List<SystemAppModule> get APP_MODULES => [
-  {instances}
+{instances}
 ];
