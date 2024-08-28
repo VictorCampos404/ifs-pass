@@ -56,16 +56,13 @@ class _SystemCheckboxState extends State<SystemCheckbox> {
             ),
           ),
           if (widget.text != null)
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Flexible(
-                child: Container(
-                  width: 320,
-                  child: Text(
-                    widget.text ?? "",
-                    textAlign: TextAlign.start,
-                    softWrap: true,
-                  ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  widget.text ?? "",
+                  textAlign: TextAlign.justify,
+                  softWrap: true,
                 ),
               ),
             )

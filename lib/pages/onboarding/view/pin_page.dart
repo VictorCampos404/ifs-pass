@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:system_design_package/system_design.dart';
+import 'package:system_package/system.dart';
 
 class PinPage extends StatefulWidget {
   const PinPage({super.key});
@@ -9,10 +10,6 @@ class PinPage extends StatefulWidget {
 }
 
 class _PinPageState extends State<PinPage> {
-  int printing() {
-    return 1;
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,27 +18,22 @@ class _PinPageState extends State<PinPage> {
           FocusScope.of(context).unfocus();
         },
         child: SafeArea(
-          child: Center(
+          child: Padding(
+            padding: EdgeInsets.all(
+              SystemSpacing.x4.value,
+            ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
-                      padding: EdgeInsets.only(
-                        top: SystemSpacing.x9.value,
-                      ),
-                      child: const SystemIcon(
-                        SystemIcons.lock_2_line,
-                        size: SystemSize.extraLarge,
-                      ),
+                    const SystemIcon(
+                      SystemIcons.lock_2_line,
+                      size: SystemSize.extraLarge,
                     ),
                     Padding(
                       padding: EdgeInsets.only(
-                        top: SystemSpacing.x4.value,
-                        left: SystemSpacing.x4.value,
-                        right: SystemSpacing.x4.value,
+                        top: SystemSpacing.x3.value,
                       ),
                       child: const Text(
                         "Defina seu PIN de acesso",
@@ -58,20 +50,15 @@ class _PinPageState extends State<PinPage> {
                     )
                   ],
                 ),
-                Container(
-                  padding: EdgeInsets.only(
-                    left: SystemSpacing.x4.value,
-                    right: SystemSpacing.x4.value,
-                    bottom: SystemSpacing.x9.value,
-                  ),
-                  child: SystemPrimaryButton(
-                    text: "Avançar",
-                    onTap: printing,
-                    size: SystemSize.extraLarge,
-                    enable: true,
-                    backgroundColor: SystemColors.primary,
-                    expanded: true,
-                  ),
+                SystemPrimaryButton(
+                  text: "Avançar",
+                  onTap: () {
+                    Navigator.pushNamed(context, SystemRoutes.confirmPinPage);
+                  },
+                  size: SystemSize.extraLarge,
+                  enable: true,
+                  backgroundColor: SystemColors.primary,
+                  expanded: true,
                 ),
               ],
             ),

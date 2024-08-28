@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:system_design_package/system_design.dart';
+import 'package:system_package/system.dart';
 
 class WellcomePage extends StatelessWidget {
-  int printing() {
-    return 1;
-  }
-
   const WellcomePage({super.key});
 
   @override
@@ -42,10 +39,12 @@ class WellcomePage extends StatelessWidget {
               ).body2(),
               SystemPrimaryButton(
                 text: "Começar",
-                onTap: printing,
+                onTap: () {
+                  Navigator.pushNamed(context, SystemRoutes.loginPage);
+                },
                 size: SystemSize.extraLarge,
-                backgroundColor: SystemColors.primary,
                 expanded: true,
+                loading: false,
               ),
             ],
           ),

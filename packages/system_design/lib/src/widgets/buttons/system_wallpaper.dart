@@ -23,9 +23,12 @@ class _SystemWallpaperState extends State<SystemWallpaper> {
       onTap: () => widget.onChanged(!widget.isChecked),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
         children: [
           SystemCheckbox(
-              isChecked: widget.isChecked, onChanged: widget.onChanged),
+            isChecked: widget.isChecked,
+            onChanged: widget.onChanged,
+          ),
           Padding(
             padding: EdgeInsets.only(
               left: SystemSpacing.x1.value,

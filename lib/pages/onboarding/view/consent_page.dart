@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:system_design_package/system_design.dart';
+import 'package:system_package/system.dart';
 
 class ConsentPage extends StatefulWidget {
   const ConsentPage({super.key});
@@ -9,10 +10,6 @@ class ConsentPage extends StatefulWidget {
 }
 
 class _ConsentPageState extends State<ConsentPage> {
-  int printing() {
-    return 1;
-  }
-
   bool terms = false;
   bool location = false;
   bool camera = false;
@@ -21,34 +18,31 @@ class _ConsentPageState extends State<ConsentPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Center(
+        child: Padding(
+          padding: EdgeInsets.all(
+            SystemSpacing.x4.value,
+          ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                    padding: EdgeInsets.only(
-                      top: SystemSpacing.x9.value,
-                    ),
-                    child: const SystemIcon(
-                      SystemIcons.information_line,
-                      size: SystemSize.extraLarge,
-                    ),
+                  const SystemIcon(
+                    SystemIcons.information_line,
+                    size: SystemSize.extraLarge,
                   ),
                   Padding(
                     padding: EdgeInsets.only(
-                      top: SystemSpacing.x4.value,
+                      top: SystemSpacing.x3.value,
                     ),
                     child: const Text(
                       "Seu Primeiro Acesso",
+                      textAlign: TextAlign.center,
                     ).heading1(),
                   ),
                   Padding(
                     padding: EdgeInsets.only(
                       top: SystemSpacing.x5.value,
-                      left: SystemSpacing.x4.value,
                     ),
                     child: SystemCheckbox(
                       isChecked: terms,
@@ -63,8 +57,7 @@ class _ConsentPageState extends State<ConsentPage> {
                   ),
                   Padding(
                     padding: EdgeInsets.only(
-                      top: SystemSpacing.x4.value,
-                      left: SystemSpacing.x4.value,
+                      top: SystemSpacing.x2.value,
                     ),
                     child: SystemCheckbox(
                       isChecked: location,
@@ -78,8 +71,7 @@ class _ConsentPageState extends State<ConsentPage> {
                   ),
                   Padding(
                     padding: EdgeInsets.only(
-                      top: SystemSpacing.x4.value,
-                      left: SystemSpacing.x4.value,
+                      top: SystemSpacing.x2.value,
                     ),
                     child: SystemCheckbox(
                       isChecked: camera,
@@ -93,20 +85,15 @@ class _ConsentPageState extends State<ConsentPage> {
                   ),
                 ],
               ),
-              Container(
-                padding: EdgeInsets.only(
-                  left: SystemSpacing.x4.value,
-                  right: SystemSpacing.x4.value,
-                  bottom: SystemSpacing.x9.value,
-                ),
-                child: SystemPrimaryButton(
-                  text: "Eu-Concordo",
-                  onTap: printing,
-                  size: SystemSize.extraLarge,
-                  enable: true,
-                  backgroundColor: SystemColors.primary,
-                  expanded: true,
-                ),
+              SystemPrimaryButton(
+                text: "Eu concordo",
+                onTap: () {
+                  Navigator.pushNamed(context, SystemRoutes.wallpaperPage);
+                },
+                size: SystemSize.extraLarge,
+                enable: terms && location && camera,
+                backgroundColor: SystemColors.primary,
+                expanded: true,
               ),
             ],
           ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ifs_pass/main_module.dart';
 import 'package:ifs_pass/pages/onboarding/view/wellcome_page.dart';
+import 'package:system_design_package/system_design.dart';
 import 'package:system_package/system.dart';
 
 void main() {
@@ -17,7 +18,9 @@ class MyApp extends StatelessWidget {
         title: 'Ifsp-ass',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: SystemColors.primary.value,
+          ),
           useMaterial3: true,
         ),
         routes: MainModule.getRoutes(),
