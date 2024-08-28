@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:system_design_package/system_design.dart';
 
-class Pinpage extends StatefulWidget {
-  const Pinpage({super.key});
+class PinPage extends StatefulWidget {
+  const PinPage({super.key});
 
   @override
-  State<Pinpage> createState() => _PinpageState();
+  State<PinPage> createState() => _PinPageState();
 }
 
-class _PinpageState extends State<Pinpage> {
+class _PinPageState extends State<PinPage> {
   int printing() {
     return 1;
   }

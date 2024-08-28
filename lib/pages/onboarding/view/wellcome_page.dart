@@ -12,24 +12,20 @@ class WellcomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Container(
-              margin: EdgeInsets.only(
-                top: SystemSpacing.x9.value,
-              ),
-              color: SystemColors.white.value,
-              child: Column(
+        child: Padding(
+          padding: EdgeInsets.all(
+            SystemSpacing.x4.value,
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
                 children: [
                   Image.asset(
                     CustomImages.ifspLogo,
                     height: 32,
                     width: 32,
                   ),
-                  // DAQUI PARA BAIXO TROCAR PELO SYSTEM SPACING
-                  //CONST VAI QUEBRAR
-
                   Padding(
                     padding: EdgeInsets.only(
                       top: SystemSpacing.x4.value,
@@ -40,29 +36,19 @@ class WellcomePage extends StatelessWidget {
                   ),
                 ],
               ),
-            ),
-            const Padding(
-              padding: EdgeInsets.all(32.0),
-              child: Text(
+              const Text(
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
                 textAlign: TextAlign.center,
-              ),
-            ),
-            Container(
-              padding: const EdgeInsets.only(
-                left: 32,
-                right: 32,
-                bottom: 72,
-              ),
-              child: SystemPrimaryButton(
+              ).body2(),
+              SystemPrimaryButton(
                 text: "Começar",
                 onTap: printing,
                 size: SystemSize.extraLarge,
                 backgroundColor: SystemColors.primary,
                 expanded: true,
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
