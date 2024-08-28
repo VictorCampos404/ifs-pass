@@ -58,7 +58,7 @@ class SystemPrimaryButton extends StatelessWidget {
                 ),
               ),
               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-              elevation: MaterialStateProperty.all(1),
+              elevation: MaterialStateProperty.all(0),
               shadowColor: MaterialStateProperty.all(
                 SystemColors.neutral800.value,
               ),

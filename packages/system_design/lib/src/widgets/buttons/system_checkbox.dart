@@ -62,8 +62,7 @@ class _SystemCheckboxState extends State<SystemCheckbox> {
                 child: Text(
                   widget.text ?? "",
                   textAlign: TextAlign.justify,
-                  softWrap: true,
-                ),
+                ).body2(),
               ),
             )
         ],
