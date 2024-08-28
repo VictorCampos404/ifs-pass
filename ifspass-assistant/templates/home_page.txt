@@ -12,15 +12,20 @@ class {app_name}HomePage extends StatelessWidget {
       builder: (context, controller, child) {
         return Scaffold(
           appBar: AppBar(
-            title: const Text('{app_name}'),
+            backgroundColor: SystemColors.primary.value,
+            title: const Text('{app_name}').heading3(
+              color: SystemColors.white,
+            ),
+            foregroundColor: SystemColors.white.value,
           ),
           body: Center(
             child: Text(
               '${controller.count}',
               style: const TextStyle(fontSize: 24),
-            ),
+            ).display2(),
           ),
           floatingActionButton: FloatingActionButton(
+            backgroundColor: SystemColors.primary.value,
             child: Icon(
               SystemIcons.add_fill.value,
               color: SystemColors.white.value,
