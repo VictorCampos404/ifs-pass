@@ -8,6 +8,7 @@ class WellcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: SystemColors.white.value,
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(

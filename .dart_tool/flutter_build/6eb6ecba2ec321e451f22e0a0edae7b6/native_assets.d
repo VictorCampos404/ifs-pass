@@ -1,1 +1,0 @@
- /Users/bryanribeiro/Documents/Flutter\ Projects/ifs-pass/.dart_tool/flutter_build/6eb6ecba2ec321e451f22e0a0edae7b6/native_assets.yaml: 

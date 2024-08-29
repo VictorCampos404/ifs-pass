@@ -9,3 +9,4 @@ export 'inputs/system_input.dart';
 export 'buttons/system_checkbox.dart';
 export 'buttons/system_wallpaper.dart';
 export 'inputs/system_pin_entry.dart';
+export 'notification/pop_up.dart';
