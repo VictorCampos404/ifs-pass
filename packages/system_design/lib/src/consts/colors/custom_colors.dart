@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 class CustomColors {
-  static const Color primary = Color(0xff2563EB);
+  static const Color primary = Color(0Xff379936);
   static const Color neutral50 = Color(0xffF8FAFC);
   static const Color neutral200 = Color(0xffE2E8F0);
   static const Color neutral300 = Color(0xffCBD5E1);

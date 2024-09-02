@@ -9,7 +9,6 @@ extension SystemFont on Text {
       fontWeight: SystemFontWeight.semiBold.value,
       fontSize: 72,
       fontStyle: FontStyle.normal,
-      wordSpacing: -10,
       color: color?.value ?? SystemColors.neutral800.value,
     );
     return Text(data!,
@@ -26,7 +25,6 @@ extension SystemFont on Text {
       fontWeight: SystemFontWeight.semiBold.value,
       fontSize: 52,
       fontStyle: FontStyle.normal,
-      wordSpacing: -10,
       color: color?.value ?? SystemColors.neutral800.value,
     );
     return Text(data!,
@@ -43,7 +41,6 @@ extension SystemFont on Text {
       fontWeight: SystemFontWeight.semiBold.value,
       fontSize: 40,
       fontStyle: FontStyle.normal,
-      wordSpacing: -10,
       color: color?.value ?? SystemColors.neutral800.value,
     );
     return Text(data!,
@@ -131,7 +128,6 @@ extension SystemFont on Text {
       fontSize: 16,
       fontStyle: FontStyle.normal,
       color: color?.value ?? SystemColors.neutral800.value,
-      wordSpacing: -10,
     );
     return Text(data!,
         maxLines: maxLines,
@@ -154,7 +150,6 @@ extension SystemFont on Text {
       fontSize: 14,
       fontStyle: FontStyle.normal,
       color: color?.value ?? SystemColors.neutral800.value,
-      wordSpacing: -10,
     );
     return Text(data!,
         maxLines: maxLines,
@@ -174,7 +169,6 @@ extension SystemFont on Text {
       fontSize: 12,
       fontStyle: FontStyle.normal,
       color: color?.value ?? SystemColors.neutral800.value,
-      wordSpacing: -20,
     );
     return Text(data!,
         maxLines: maxLines,

@@ -1,0 +1,21 @@
+import 'package:system_package/system.dart';
+
+class {app_name}HomeController extends BaseStatus{
+
+  late int _count;
+  int get count => _count;
+
+  {app_name}HomeController(){
+    reset();
+  }
+
+  void reset(){
+    _count = 0;
+  }
+
+  void addOne(){
+    _count++;
+    setStatus(Status.success);
+  }
+  
+}
