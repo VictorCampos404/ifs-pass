@@ -5,6 +5,8 @@ import 'package:system_design_package/system_design.dart';
 import 'package:system_package/system.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  IfspassApi().initClient();
   runApp(const MyApp());
 }
 

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ifs_pass/services/ifspass_serivce.dart';
 import 'package:system_package/system.dart';
 
 class WellcomeController extends BaseStatus {
@@ -28,8 +29,9 @@ class WellcomeController extends BaseStatus {
     setStatus(Status.loading);
 
     try {
-      await Future.delayed(
-        const Duration(seconds: 3),
+      final response = await IfspassService.login(
+        username: userNameCtrl.text,
+        password: passwordCtrl.text,
       );
 
       userNameCtrl.clear();
