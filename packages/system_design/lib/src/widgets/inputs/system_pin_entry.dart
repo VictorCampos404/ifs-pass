@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:system_design_package/system_design.dart';
 
 class SystemPinEntry extends StatefulWidget {
-  int length;
+  final int length;
   final Function(String) onChanged;
-  SystemPinEntry({
+  const SystemPinEntry({
     required this.length,
     required this.onChanged,
     super.key,

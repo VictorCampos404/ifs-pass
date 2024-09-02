@@ -34,6 +34,8 @@ class WellcomeController extends BaseStatus {
         password: passwordCtrl.text,
       );
 
+      print(response);
+
       userNameCtrl.clear();
       passwordCtrl.clear();
 

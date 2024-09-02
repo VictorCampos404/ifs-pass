@@ -75,6 +75,9 @@ class _LoginPageState extends State<LoginPage> {
                             child: SystemInput(
                               title: "Matrícula",
                               hint: '0000000',
+                              inputFormatters: [
+                                SystemMasks.userName,
+                              ],
                               autofocus: true,
                               enable: !controller.isloading,
                               controller: controller.userNameCtrl,

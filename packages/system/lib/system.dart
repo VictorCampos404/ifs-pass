@@ -7,6 +7,7 @@ export 'src/shared_preferences/system_shared_preferences.dart';
 export 'src/interface/system_app_module.dart';
 export 'src/consts/system_routes.dart';
 export 'src/models/system_request_result.dart';
+export 'src/consts/system_masks.dart';
 
 export 'package:provider/provider.dart';
 export 'package:provider/single_child_widget.dart';
