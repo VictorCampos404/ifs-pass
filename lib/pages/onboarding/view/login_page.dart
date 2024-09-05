@@ -154,7 +154,18 @@ class _LoginPageState extends State<LoginPage> {
                       if (!context.mounted) return;
 
                       if (result.status) {
-                        Navigator.pushNamed(context, SystemRoutes.consentPage);
+                        if (controller.haveAccount &&
+                            !controller.needPermission) {
+                          Navigator.pushNamed(
+                            context,
+                            SystemRoutes.home,
+                          );
+                        } else {
+                          Navigator.pushNamed(
+                            context,
+                            SystemRoutes.consentPage,
+                          );
+                        }
                       } else {
                         PopUp.showError(
                           context,

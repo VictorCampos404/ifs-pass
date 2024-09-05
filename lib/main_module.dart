@@ -51,4 +51,22 @@ class MainModule {
 
     return routes;
   }
+
+  static List<SystemPermission> get permissions => [
+        SystemPermission(
+          name: 'Localização',
+          description: 'Acesso a localização do dispositivo',
+          service: Permission.location,
+        ),
+        SystemPermission(
+          name: 'Câmera',
+          description: 'Acesso a câmera do dispositivo',
+          service: Permission.camera,
+        ),
+        SystemPermission(
+          name: 'Galeria',
+          description: 'Acesso a galeria do dispositivo',
+          service: Permission.photos,
+        ),
+      ];
 }

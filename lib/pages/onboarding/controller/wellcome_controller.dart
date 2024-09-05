@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ifs_pass/main_module.dart';
 import 'package:ifs_pass/services/ifspass_serivce.dart';
 import 'package:system_package/system.dart';
 
@@ -6,8 +7,32 @@ class WellcomeController extends BaseStatus {
   TextEditingController userNameCtrl = TextEditingController();
   TextEditingController passwordCtrl = TextEditingController();
 
+  late SystemUser? _user;
+  SystemUser? get user => _user;
+
   bool get isValidLogin =>
       userNameCtrl.text.length == 7 && passwordCtrl.text.isNotEmpty;
+
+  bool get haveAccount => user != null;
+
+  late bool _allowTerms;
+  bool get allowTerms => _allowTerms;
+
+  bool get needPermission {
+    for (final permission in permissions) {
+      if (!permission.greated) {
+        return true;
+      }
+    }
+
+    return false;
+  }
+
+  late List<SystemPermission> _permissions;
+  List<SystemPermission> get permissions => _permissions;
+
+  late String? _moodleToken;
+  String? get moodleToken => _moodleToken;
 
   WellcomeController() {
     reset();
@@ -16,11 +41,17 @@ class WellcomeController extends BaseStatus {
   void reset() {
     userNameCtrl = TextEditingController();
     passwordCtrl = TextEditingController();
+    _user = null;
+    _allowTerms = false;
+    _permissions = MainModule.permissions;
+    _moodleToken = null;
   }
 
   void resetLogin() {
     userNameCtrl = TextEditingController();
     passwordCtrl = TextEditingController();
+    _user = null;
+    _moodleToken = null;
 
     notifyListeners();
   }
@@ -29,21 +60,34 @@ class WellcomeController extends BaseStatus {
     setStatus(Status.loading);
 
     try {
-      final response = await IfspassService.login(
+      SystemUser? user;
+
+      (_, user) = await IfspassService.login(
         username: userNameCtrl.text,
         password: passwordCtrl.text,
       );
 
-      print(response);
-
+      _user = user;
       userNameCtrl.clear();
       passwordCtrl.clear();
+
+      await checkPermissions();
 
       setStatus(Status.success);
       return SystemRequestResult(
         status: true,
       );
-    } catch (error) {
+    } on SystemDioException catch (error) {
+      if (error is FirstAccessDioExcepition) {
+        _moodleToken = error.moodleToken;
+        setStatus(Status.error);
+        return SystemRequestResult(
+          status: true,
+          title: error.title,
+          message: error.subTitle,
+        );
+      }
+
       setStatus(Status.error);
       return SystemRequestResult(
         status: false,
@@ -51,6 +95,18 @@ class WellcomeController extends BaseStatus {
         message: 'Matrícula ou senha incorreta.',
       );
     }
+  }
+
+  void setAllowTerms(value) {
+    _allowTerms = value;
+  }
+
+  Future<void> checkPermissions() async {
+    for (final permission in permissions) {
+      await permission.check();
+    }
+
+    notifyListeners();
   }
 
   Future<SystemRequestResult> setPassword() async {
