@@ -21,4 +21,14 @@ class IfspassService {
 
     return (token, user);
   }
+
+  static Future<void> createAccount({
+    required String moodleToken,
+    required String username,
+  }) async {
+    await IfspassApi().createAccount(
+      moodleToken: moodleToken,
+      username: username,
+    );
+  }
 }
