@@ -8,6 +8,7 @@ import 'package:ifs_pass/pages/onboarding/view/consent_page.dart';
 import 'package:ifs_pass/pages/onboarding/controller/wellcome_controller.dart';
 import 'package:ifs_pass/pages/onboarding/view/login_page.dart';
 import 'package:ifs_pass/pages/onboarding/view/pin_page.dart';
+import 'package:ifs_pass/pages/onboarding/view/splash_page.dart';
 import 'package:ifs_pass/pages/onboarding/view/wallpaper_page.dart';
 import 'package:ifs_pass/pages/onboarding/view/wellcome_page.dart';
 import 'package:system_package/system.dart';
@@ -36,6 +37,7 @@ class MainModule {
 
     //Rotas da aplicação principal
     routes.addAll({
+      SystemRoutes.splashPage: (context) => const SplashPage(),
       SystemRoutes.wellcomePage: (context) => const WellcomePage(),
       SystemRoutes.loginPage: (context) => const LoginPage(),
       SystemRoutes.consentPage: (context) => const ConsentPage(),

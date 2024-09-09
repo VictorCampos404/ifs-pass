@@ -6,4 +6,5 @@ class SystemRoutes {
   static String wallpaperPage = 'wallpaper-page';
   static String pinPage = 'pin-page';
   static String confirmPinPage = 'confirm-pin-page';
+  static String splashPage = 'splash-page';
 }

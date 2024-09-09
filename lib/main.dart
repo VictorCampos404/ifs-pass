@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ifs_pass/main_module.dart';
-import 'package:ifs_pass/pages/onboarding/view/wellcome_page.dart';
+import 'package:ifs_pass/pages/onboarding/view/splash_page.dart';
 import 'package:system_design_package/system_design.dart';
 import 'package:system_package/system.dart';
 
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         routes: MainModule.getRoutes(),
-        home: const WellcomePage(),
+        home: const SplashPage(),
       ),
     );
   }

@@ -77,6 +77,11 @@ class WellcomeController extends BaseStatus {
         value: passwordCtrl.text,
       );
 
+      await LocalData.saveData(
+        key: DataKey.user, 
+        value: user?.toJson(),
+      );
+
       _user = user;
       userNameCtrl.clear();
       passwordCtrl.clear();
