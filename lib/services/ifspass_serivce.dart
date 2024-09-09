@@ -19,6 +19,11 @@ class IfspassService {
       TokenInterceptor(token: token),
     );
 
+    await SecureLocalData.saveData(
+      key: SecureDataKey.token,
+      value: token,
+    );
+
     return (token, user);
   }
 }
