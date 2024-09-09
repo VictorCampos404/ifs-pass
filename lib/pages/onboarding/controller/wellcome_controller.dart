@@ -57,7 +57,7 @@ class WellcomeController extends BaseStatus {
   }
 
   Future<SystemRequestResult> login({bool updateStatus = true}) async {
-    if(updateStatus) setStatus(Status.loading);
+    if (updateStatus) setStatus(Status.loading);
 
     try {
       SystemUser? user;
@@ -67,13 +67,23 @@ class WellcomeController extends BaseStatus {
         password: passwordCtrl.text,
       );
 
+      await SecureLocalData.saveData(
+        key: SecureDataKey.userName,
+        value: userNameCtrl.text,
+      );
+
+      await SecureLocalData.saveData(
+        key: SecureDataKey.password,
+        value: passwordCtrl.text,
+      );
+
       _user = user;
       userNameCtrl.clear();
       passwordCtrl.clear();
 
       await checkPermissions();
 
-      if(updateStatus) setStatus(Status.success);
+      if (updateStatus) setStatus(Status.success);
       return SystemRequestResult(
         status: true,
       );
@@ -81,7 +91,7 @@ class WellcomeController extends BaseStatus {
       if (error is FirstAccessDioExcepition) {
         _moodleToken = error.moodleToken;
         await checkPermissions();
-        if(updateStatus) setStatus(Status.error);
+        if (updateStatus) setStatus(Status.error);
         return SystemRequestResult(
           status: true,
           title: error.title,
@@ -89,11 +99,11 @@ class WellcomeController extends BaseStatus {
         );
       }
 
-      if(updateStatus) setStatus(Status.error);
+      if (updateStatus) setStatus(Status.error);
       return SystemRequestResult(
         status: false,
-        title: 'Erro ao fazer login.',
-        message: 'Matrícula ou senha incorreta.',
+        title: error.title,
+        message: error.subTitle,
       );
     }
   }
@@ -102,7 +112,6 @@ class WellcomeController extends BaseStatus {
     setStatus(Status.loading);
 
     try {
-
       await IfspassService.createAccount(
         moodleToken: _moodleToken ?? '',
         username: userNameCtrl.text,
