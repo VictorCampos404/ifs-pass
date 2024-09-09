@@ -56,8 +56,8 @@ class WellcomeController extends BaseStatus {
     notifyListeners();
   }
 
-  Future<SystemRequestResult> login() async {
-    setStatus(Status.loading);
+  Future<SystemRequestResult> login({bool updateStatus = true}) async {
+    if(updateStatus) setStatus(Status.loading);
 
     try {
       SystemUser? user;
@@ -73,14 +73,15 @@ class WellcomeController extends BaseStatus {
 
       await checkPermissions();
 
-      setStatus(Status.success);
+      if(updateStatus) setStatus(Status.success);
       return SystemRequestResult(
         status: true,
       );
     } on SystemDioException catch (error) {
       if (error is FirstAccessDioExcepition) {
         _moodleToken = error.moodleToken;
-        setStatus(Status.error);
+        await checkPermissions();
+        if(updateStatus) setStatus(Status.error);
         return SystemRequestResult(
           status: true,
           title: error.title,
@@ -88,7 +89,7 @@ class WellcomeController extends BaseStatus {
         );
       }
 
-      setStatus(Status.error);
+      if(updateStatus) setStatus(Status.error);
       return SystemRequestResult(
         status: false,
         title: 'Erro ao fazer login.',
@@ -97,8 +98,35 @@ class WellcomeController extends BaseStatus {
     }
   }
 
+  Future<SystemRequestResult> createAccount() async {
+    setStatus(Status.loading);
+
+    try {
+
+      await IfspassService.createAccount(
+        moodleToken: _moodleToken ?? '',
+        username: userNameCtrl.text,
+      );
+
+      await login(updateStatus: false);
+
+      setStatus(Status.success);
+      return SystemRequestResult(
+        status: true,
+      );
+    } on SystemDioException catch (error) {
+      setStatus(Status.error);
+      return SystemRequestResult(
+        status: true,
+        title: error.title,
+        message: error.subTitle,
+      );
+    }
+  }
+
   void setAllowTerms(value) {
     _allowTerms = value;
+    notifyListeners();
   }
 
   Future<void> checkPermissions() async {

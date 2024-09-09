@@ -10,7 +10,7 @@ class IfspassApi extends SystemApi {
     required String password,
   }) async {
     try {
-      final response = networkDio.post(
+      final response = await networkDio.post(
         url: '/v1/user/login',
         body: {
           'username': username,
@@ -31,7 +31,29 @@ class IfspassApi extends SystemApi {
       }
 
       throw UnknownDioExcepition();
-    } catch (error) {
+    }
+  }
+
+  Future<Response> createAccount({
+    required String moodleToken,
+    required String username,
+  }) async {
+    try {
+      final response = await networkDio.post(
+        url: '/v1/user/create-account',
+        body: {
+          'moodleToken': moodleToken,
+          'permissionToSaveData': true,
+          'username': username,
+        },
+      );
+
+      return response;
+    } on DioException catch (error) {
+      if (isError(error, "USER_ALREADY_EXISTS")) {
+       throw UserAlreadyExistsDioExcepition();
+      }
+
       throw UnknownDioExcepition();
     }
   }

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:ifs_pass/apps_modules.g.dart';
 import 'package:ifs_pass/pages/home/view/home_page.dart';
@@ -63,10 +65,11 @@ class MainModule {
           description: 'Acesso a câmera do dispositivo',
           service: Permission.camera,
         ),
-        SystemPermission(
-          name: 'Galeria',
-          description: 'Acesso a galeria do dispositivo',
-          service: Permission.photos,
-        ),
+        if(Platform.isIOS)
+          SystemPermission(
+            name: 'Galeria',
+            description: 'Acesso a galeria do dispositivo',
+            service: Permission.photos,
+          ),
       ];
 }

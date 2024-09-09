@@ -85,7 +85,15 @@ class FirstAccessDioExcepition extends SystemDioException {
   FirstAccessDioExcepition({
     this.moodleToken,
   }) : super(
-          title: "Primeiro acesso ao app",
-          subTitle: "Aceite os termos e as permissões para criar sua conta",
+          title: "Primeiro acesso ao app.",
+          subTitle: "Aceite os termos e as permissões para criar sua conta.",
+        );
+}
+
+class UserAlreadyExistsDioExcepition extends SystemDioException {
+  UserAlreadyExistsDioExcepition()
+      : super(
+          title: "Usuário já cadastrado.",
+          subTitle: "Um usuário com essa matrícula foi encontrado na base de dados.",
         );
 }

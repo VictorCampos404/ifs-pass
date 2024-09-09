@@ -79,13 +79,30 @@ class _ConsentPageState extends State<ConsentPage> {
                 ),
                 SystemPrimaryButton(
                   text: "Eu concordo",
-                  onTap: () {
+                  onTap: () async {
+
+                    if(!controller.haveAccount){
+                      final result = await controller.createAccount();
+
+                      if (!context.mounted) return;
+
+                      if (!result.status) {
+                        PopUp.showError(
+                          context,
+                          result.title ?? '',
+                          message: result.message,
+                        );
+                        return;
+                      }
+                    }
+
                     Navigator.pushNamed(context, SystemRoutes.home);
                   },
                   size: SystemSize.extraLarge,
-                  enable: !controller.needPermission,
+                  enable: !controller.needPermission && (controller.haveAccount || controller.allowTerms),
                   backgroundColor: SystemColors.primary,
                   expanded: true,
+                  loading: controller.isloading,
                 ),
               ],
             ),
