@@ -29,6 +29,7 @@ class SystemInput extends StatefulWidget {
   final Widget? outSuffix;
   final Function()? onTap;
   final bool? readOnly;
+  final SystemColors? fillColor;
 
   const SystemInput({
     Key? key,
@@ -56,6 +57,7 @@ class SystemInput extends StatefulWidget {
     this.outSuffix,
     this.onTap,
     this.readOnly,
+    this.fillColor,
   }) : super(key: key);
 
   @override
@@ -131,6 +133,8 @@ class _SystemInputState extends State<SystemInput> {
                   onChanged: widget.onChanged,
                   obscureText: widget.isPassword! && obscure,
                   decoration: InputDecoration(
+                    filled: true,
+                    fillColor: widget.fillColor?.value,
                     contentPadding: EdgeInsets.symmetric(
                       horizontal: SystemSpacing.x2.value,
                     ),

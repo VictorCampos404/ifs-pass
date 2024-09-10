@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 class GlassContainer extends StatelessWidget {
   final Widget? child;
   final double? radius;
+  final double? width;
+  final double? height;
   final Duration? duration;
   final Curve? curve;
   final EdgeInsets? margin;
@@ -14,6 +16,8 @@ class GlassContainer extends StatelessWidget {
   const GlassContainer({
     this.child,
     this.radius,
+    this.width,
+    this.height,
     this.duration,
     this.curve,
     this.margin,
@@ -27,7 +31,7 @@ class GlassContainer extends StatelessWidget {
     return Padding(
       padding: margin ?? EdgeInsets.zero,
       child: ClipRRect(
-        borderRadius: BorderRadius.all(Radius.circular(radius ?? 5)),
+        borderRadius: BorderRadius.all(Radius.circular(radius ?? 0)),
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 10.0, sigmaY: 10.0),
           child: AnimatedContainer(
@@ -35,8 +39,15 @@ class GlassContainer extends StatelessWidget {
             curve: curve ?? Curves.linear,
             constraints: constraints,
             padding: padding,
+            width: width,
+            height: height,
             decoration:
-                BoxDecoration(color: Colors.grey.shade200.withOpacity(0.3)),
+                BoxDecoration(
+                  color: Colors.grey.shade200.withOpacity(0.1),
+                  border: Border.all(
+                    color: Colors.grey.shade200.withOpacity(0.3),
+                  )
+                ),
             child: child,
           ),
         ),

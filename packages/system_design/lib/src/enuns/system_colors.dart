@@ -14,7 +14,8 @@ enum SystemColors {
   info(value: CustomColors.info),
   positive(value: CustomColors.positive),
   warning(value: CustomColors.warning),
-  negative(value: CustomColors.negative);
+  negative(value: CustomColors.negative),
+  transparent(value: CustomColors.transparent);
 
   final Color value;
   const SystemColors({required this.value});

@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class CustomColors {
@@ -14,4 +15,5 @@ class CustomColors {
   static const Color positive = Color(0xff059669);
   static const Color warning = Color(0xffF59E0B);
   static const Color negative = Color(0xffDC2626);
+  static const Color transparent = Colors.transparent;
 }

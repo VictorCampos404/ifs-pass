@@ -73,7 +73,7 @@ class AvatarSize {
   static double converter(SystemSize size) {
     switch (size) {
       case SystemSize.extraLarge:
-        return 64;
+        return 88;
       case SystemSize.large:
         return 56;
       case SystemSize.medium:
