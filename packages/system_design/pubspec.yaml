@@ -14,6 +14,9 @@ dependencies:
   cached_network_image: ^3.3.1
   another_flushbar: ^1.10.28
 
+  system_package:
+    path: '../system'
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

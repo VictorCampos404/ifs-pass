@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:system_package/src/network/services/system_network_dio.dart';
+import 'package:system_package/system.dart';
 
 abstract class SystemApi {
   static late SystemNetworkDio _networkDio;
@@ -12,6 +13,14 @@ abstract class SystemApi {
 
   void addInterceptor(Interceptor element) {
     _networkDio.clientDio.client.interceptors.add(element);
+  }
+
+  bool haveToken() {
+    final list = _networkDio.clientDio.client.interceptors
+        .whereType<TokenInterceptor>()
+        .toList();
+
+    return list.isNotEmpty;
   }
 
   void removeInterceptor<T>() {

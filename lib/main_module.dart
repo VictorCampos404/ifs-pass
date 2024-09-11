@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:ifs_pass/apps_modules.g.dart';
+import 'package:ifs_pass/pages/home/controller/home_controller.dart';
 import 'package:ifs_pass/pages/home/view/home_page.dart';
 import 'package:ifs_pass/pages/onboarding/view/confirm_pin_page.dart';
 import 'package:ifs_pass/pages/onboarding/view/consent_page.dart';
@@ -21,6 +22,9 @@ class MainModule {
     providers.addAll([
       ChangeNotifierProvider(
         create: (_) => WellcomeController(),
+      ),
+      ChangeNotifierProvider(
+        create: (_) => HomeController(),
       ),
     ]);
 
@@ -67,7 +71,7 @@ class MainModule {
           description: 'Acesso a câmera do dispositivo',
           service: Permission.camera,
         ),
-        if(Platform.isIOS)
+        if (Platform.isIOS)
           SystemPermission(
             name: 'Galeria',
             description: 'Acesso a galeria do dispositivo',

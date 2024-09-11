@@ -134,7 +134,8 @@ class _SystemInputState extends State<SystemInput> {
                   obscureText: widget.isPassword! && obscure,
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: widget.fillColor?.value,
+                    fillColor: widget.fillColor?.value ??
+                        SystemColors.transparent.value,
                     contentPadding: EdgeInsets.symmetric(
                       horizontal: SystemSpacing.x2.value,
                     ),

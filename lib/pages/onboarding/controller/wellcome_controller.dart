@@ -45,6 +45,8 @@ class WellcomeController extends BaseStatus {
     _allowTerms = false;
     _permissions = MainModule.permissions;
     _moodleToken = null;
+
+    notifyListeners();
   }
 
   void resetLogin() {
@@ -78,7 +80,7 @@ class WellcomeController extends BaseStatus {
       );
 
       await LocalData.saveData(
-        key: DataKey.user, 
+        key: DataKey.user,
         value: user?.toJson(),
       );
 

@@ -15,16 +15,19 @@ enum DataKey {
 }
 
 class LocalData {
-  static Future<SharedPreferences> get _instance => SharedPreferences.getInstance();
+  static Future<SharedPreferences> get _instance =>
+      SharedPreferences.getInstance();
 
-  static Future<void> saveData({required DataKey key, required dynamic value,}) async {
-
-    if(!_matchValueType(key.type, value)){
+  static Future<void> saveData({
+    required DataKey key,
+    required dynamic value,
+  }) async {
+    if (!_matchValueType(key.type, value)) {
       throw Exception('Value is not correct type');
     }
 
     final sharedPreferences = await _instance;
- 
+
     switch (key.type) {
       case String:
         await sharedPreferences.setString(key.name, value as String);
@@ -44,9 +47,8 @@ class LocalData {
   }
 
   static Future<dynamic> readData({required DataKey key}) async {
-
     final sharedPreferences = await _instance;
- 
+
     switch (key.type) {
       case String:
         return sharedPreferences.get(key.name) as String?;
@@ -59,10 +61,9 @@ class LocalData {
       case const (List<String>):
         return sharedPreferences.get(key.name) as List<String>?;
       case const (Map<String, dynamic>):
-
         final data = sharedPreferences.get(key.name) as String?;
 
-        if(data != null){
+        if (data != null) {
           return jsonDecode(data) as Map<String, dynamic>?;
         }
 
@@ -72,14 +73,15 @@ class LocalData {
     }
   }
 
-  static Future<void> clearData({required DataKey key,}) async {
-
+  static Future<void> clearData({
+    required DataKey key,
+  }) async {
     final sharedPreferences = await _instance;
- 
+
     sharedPreferences.remove(key.name);
   }
 
-  static bool _matchValueType(Type type, dynamic value){
+  static bool _matchValueType(Type type, dynamic value) {
     switch (type) {
       case String:
         return value is String;
