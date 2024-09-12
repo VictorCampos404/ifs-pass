@@ -12,7 +12,6 @@ export 'src/network/interceptors/token_interceptor.dart';
 export 'src/network/exceptions/system_exeception.dart';
 export 'src/local_data/local_data.dart';
 export 'src/local_data/secure_local_data.dart';
-export 'src/consts/system_images.dart';
 
 export 'package:provider/provider.dart';
 export 'package:provider/single_child_widget.dart';

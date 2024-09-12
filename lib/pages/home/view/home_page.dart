@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
                 decoration: const BoxDecoration(
                   image: DecorationImage(
                     image: AssetImage(
-                      SystemImages.background,
+                      CustomImages.background,
                     ),
                     filterQuality: FilterQuality.high,
                     fit: BoxFit.cover,
@@ -192,42 +192,50 @@ class _HomePageState extends State<HomePage> {
                           ),
                           child: Column(
                             children: [
-                              GlassContainer(
-                                radius: 5,
-                                padding: EdgeInsets.symmetric(
-                                  horizontal: SystemSpacing.x2.value,
-                                  vertical: SystemSpacing.x2.value,
+                              Material(
+                                color: SystemColors.transparent.value,
+                                borderRadius: BorderRadius.circular(
+                                  5,
                                 ),
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    SystemAvatar(
-                                      size: SystemSize.medium,
-                                      imageUrl:
-                                          homeController.user?.moodlePhoto,
-                                    ),
-                                    Padding(
-                                      padding: EdgeInsets.only(
-                                        left: SystemSpacing.x2.value,
-                                        right: SystemSpacing.x2.value,
+                                elevation: 3,
+                                child: GlassContainer(
+                                  radius: 5,
+                                  padding: EdgeInsets.symmetric(
+                                    horizontal: SystemSpacing.x2.value,
+                                    vertical: SystemSpacing.x2.value,
+                                  ),
+                                  child: Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      SystemAvatar(
+                                        size: SystemSize.medium,
+                                        imageUrl:
+                                            homeController.user?.moodlePhoto,
                                       ),
-                                      child: Text(
-                                        'Bem vindo ${homeController.user?.firstName ?? ''}!',
-                                      ).heading4(
-                                        fontWeight: SystemFontWeight.regular,
+                                      Padding(
+                                        padding: EdgeInsets.only(
+                                          left: SystemSpacing.x2.value,
+                                          right: SystemSpacing.x2.value,
+                                        ),
+                                        child: Text(
+                                          'Bem vindo ${homeController.user?.firstName ?? ''}!',
+                                        ).heading4(
+                                          fontWeight: SystemFontWeight.regular,
+                                          color: SystemColors.white,
+                                        ),
+                                      ),
+                                      SystemIconButton(
+                                        onTap: () async {
+                                          await homeController.changeBlocked();
+                                        },
+                                        icon: SystemIcons.lock_unlock_fill,
                                         color: SystemColors.white,
                                       ),
-                                    ),
-                                    SystemIconButton(
-                                      onTap: () async {
-                                        await homeController.changeBlocked();
-                                      },
-                                      icon: SystemIcons.lock_unlock_fill,
-                                      color: SystemColors.white,
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
                               Expanded(

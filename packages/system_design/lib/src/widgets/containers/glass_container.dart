@@ -12,6 +12,7 @@ class GlassContainer extends StatelessWidget {
   final EdgeInsets? margin;
   final EdgeInsets? padding;
   final BoxConstraints? constraints;
+  final AlignmentGeometry? alignment;
 
   const GlassContainer({
     this.child,
@@ -23,6 +24,7 @@ class GlassContainer extends StatelessWidget {
     this.margin,
     this.padding,
     this.constraints,
+    this.alignment,
     super.key,
   });
 
@@ -41,6 +43,7 @@ class GlassContainer extends StatelessWidget {
             padding: padding,
             width: width,
             height: height,
+            alignment: alignment,
             decoration: BoxDecoration(
               color: Colors.grey.shade200.withOpacity(0.1),
               borderRadius: BorderRadius.all(

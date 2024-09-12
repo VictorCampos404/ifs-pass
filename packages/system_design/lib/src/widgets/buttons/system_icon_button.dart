@@ -21,18 +21,27 @@ class SystemIconButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return AbsorbPointer(
       absorbing: !(enable ?? true),
-      child: InkWell(
-        onTap: onTap,
-        borderRadius: BorderRadius.circular(5),
-        child: Container(
-          decoration: BoxDecoration(
-            color: SystemColors.transparent.value,
-            borderRadius: BorderRadius.circular(5),
-          ),
-          child: Icon(
-            icon?.value,
-            color: color?.value ?? SystemColors.neutral800.value,
-            size: size,
+      child: Material(
+        color: SystemColors.transparent.value,
+        borderRadius: BorderRadius.circular(
+          5,
+        ),
+        child: InkWell(
+          onTap: onTap,
+          borderRadius: BorderRadius.circular(5),
+          child: Container(
+            padding: EdgeInsets.all(
+              SystemSpacing.x0_5.value,
+            ),
+            decoration: BoxDecoration(
+              color: SystemColors.transparent.value,
+              borderRadius: BorderRadius.circular(5),
+            ),
+            child: Icon(
+              icon?.value,
+              color: color?.value ?? SystemColors.neutral800.value,
+              size: size,
+            ),
           ),
         ),
       ),

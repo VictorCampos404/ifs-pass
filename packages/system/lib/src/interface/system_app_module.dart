@@ -9,4 +9,9 @@ abstract class SystemAppModule {
   String get startRoute;
   bool get active;
   bool get canDisable;
+  Color? get backgroundIcon;
+  Color? get colorIcon;
+  bool? get glass;
+  String? get imageIcon;
+  IconData? get icon;
 }

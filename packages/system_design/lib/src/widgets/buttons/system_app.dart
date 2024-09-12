@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:system_design_package/src/consts/shadows/system_shadows.dart';
 import 'package:system_design_package/system_design.dart';
 import 'package:system_package/system.dart';
 
@@ -19,33 +18,73 @@ class SystemApp extends StatelessWidget {
 
     return Column(
       children: [
-        InkWell(
-          onTap: () {
-            Navigator.pushNamed(
-              context,
-              app.startRoute,
-            );
-          },
-          child: Container(
-            margin: EdgeInsets.only(
-              bottom: SystemSpacing.x0_5.value,
-            ),
-            decoration: BoxDecoration(
-              color: SystemColors.primary.value,
-              borderRadius: BorderRadius.circular(
-                5,
-              ),
-              boxShadow: SystemShadow100().value,
-            ),
-            width: size,
-            height: size,
+        Material(
+          color: app.glass ?? false
+              ? SystemColors.transparent.value
+              : app.backgroundIcon ?? SystemColors.primary.value,
+          borderRadius: BorderRadius.circular(
+            5,
+          ),
+          elevation: 3,
+          child: InkWell(
+            borderRadius: BorderRadius.circular(5),
+            onTap: () {
+              Navigator.pushNamed(
+                context,
+                app.startRoute,
+              );
+            },
+            onLongPress: () {},
+            child: app.glass ?? false
+                ? GlassContainer(
+                    width: size,
+                    height: size,
+                    radius: 5,
+                    alignment: Alignment.center,
+                    child: app.icon != null
+                        ? Icon(
+                            app.icon,
+                            color: app.colorIcon ?? SystemColors.white.value,
+                            size: size - SystemSpacing.x4.value,
+                          )
+                        : app.imageIcon != null
+                            ? Image.asset(
+                                app.imageIcon ?? '',
+                                width: size - SystemSpacing.x4.value,
+                                height: size - SystemSpacing.x4.value,
+                              )
+                            : const SizedBox(),
+                  )
+                : Container(
+                    width: size,
+                    height: size,
+                    alignment: Alignment.center,
+                    child: app.icon != null
+                        ? Icon(
+                            app.icon,
+                            color: app.colorIcon ?? SystemColors.white.value,
+                            size: size - SystemSpacing.x4.value,
+                          )
+                        : app.imageIcon != null
+                            ? Image.asset(
+                                app.imageIcon ?? '',
+                                width: size - SystemSpacing.x4.value,
+                                height: size - SystemSpacing.x4.value,
+                              )
+                            : const SizedBox(),
+                  ),
           ),
         ),
-        Text(
-          app.name,
-        ).caption(
-          fontWeight: SystemFontWeight.semiBold,
-          color: SystemColors.white,
+        Padding(
+          padding: EdgeInsets.only(
+            top: SystemSpacing.x0_5.value,
+          ),
+          child: Text(
+            app.name,
+          ).caption(
+            fontWeight: SystemFontWeight.semiBold,
+            color: SystemColors.white,
+          ),
         )
       ],
     );
