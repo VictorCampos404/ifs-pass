@@ -12,18 +12,17 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
-
   @override
   void initState() {
     Future.microtask(() async {
       final userName = await SecureLocalData.readData(SecureDataKey.userName);
 
-      if(!context.mounted) return;
+      if (!context.mounted) return;
 
-      if(userName != null){
-        Navigator.pushNamed(context, SystemRoutes.home);
-      }else{
-        Navigator.pushNamed(context, SystemRoutes.wellcomePage);
+      if (userName != null) {
+        Navigator.pushReplacementNamed(context, SystemRoutes.home);
+      } else {
+        Navigator.pushReplacementNamed(context, SystemRoutes.wellcomePage);
       }
     });
     super.initState();

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:system_design_package/system_design.dart';
 import 'package:system_package/system.dart';
 
@@ -75,12 +76,15 @@ class SystemApp extends StatelessWidget {
                   ),
           ),
         ),
-        Padding(
+        Container(
+          width: size,
           padding: EdgeInsets.only(
             top: SystemSpacing.x0_5.value,
           ),
           child: Text(
             app.name,
+            overflow: TextOverflow.ellipsis,
+            textAlign: TextAlign.center,
           ).caption(
             fontWeight: SystemFontWeight.semiBold,
             color: SystemColors.white,

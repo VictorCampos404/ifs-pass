@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:system_design_package/system_design.dart';
 import 'package:system_package/system.dart';
 import 'package:ifs_pass/apps/{app_id}/consts/routes.dart';
 import 'package:ifs_pass/apps/{app_id}/pages/home/controller/home_controller.dart';
@@ -31,4 +32,19 @@ class {app_name}Module implements SystemAppModule {
 
   @override
   bool get canDisable => true;
+
+  @override
+  Color? get backgroundIcon => SystemColors.white.value;
+
+  @override
+  Color? get colorIcon => SystemColors.primary.value;
+
+  @override
+  IconData? get icon => SystemIcons.window_fill.value;
+
+  @override
+  bool? get glass => null;
+
+  @override
+  String? get imageIcon => null;
 }

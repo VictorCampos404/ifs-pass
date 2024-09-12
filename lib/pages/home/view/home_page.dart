@@ -252,13 +252,12 @@ class _HomePageState extends State<HomePage> {
                                       runSpacing: SystemSpacing.x2.value,
                                       spacing: SystemSpacing.x2.value,
                                       children: [
-                                        for (int j = 0; j < 10; j++)
-                                          for (int i = 0;
-                                              i < homeController.apps.length;
-                                              i++)
-                                            SystemApp(
-                                              app: homeController.apps[i],
-                                            )
+                                        for (int i = 0;
+                                            i < homeController.apps.length;
+                                            i++)
+                                          SystemApp(
+                                            app: homeController.apps[i],
+                                          )
                                       ],
                                     ),
                                   ),
@@ -274,110 +273,3 @@ class _HomePageState extends State<HomePage> {
     });
   }
 }
-
-
-// Stack(
-//           alignment: Alignment.center,
-//           children: [
-//             Image.asset(
-//               SystemImages.background,
-//               width: MediaQuery.sizeOf(context).width,
-//               height: MediaQuery.sizeOf(context).height,
-//               fit: BoxFit.cover,
-//             ),
-//             GlassContainer(
-//               width: MediaQuery.sizeOf(context).width,
-//               height: MediaQuery.sizeOf(context).height,
-//               child: SafeArea(
-//                 child: Column(
-//                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//                   children: [
-//                     Row(
-//                       mainAxisAlignment: MainAxisAlignment.end,
-//                       children: [
-//                         Padding(
-//                           padding: EdgeInsets.only(
-//                             top: SystemSpacing.x2.value,
-//                             right: SystemSpacing.x2.value,
-//                           ),
-//                           child: SystemIconButton(
-//                             onTap: () async {
-//                               await SecureLocalData.clearData(SecureDataKey.userName);
-//                               await SecureLocalData.clearData(SecureDataKey.password);
-//                               await SecureLocalData.clearData(SecureDataKey.token);
-//                               await LocalData.clearData(key: DataKey.user);
-        
-//                               if(!context.mounted) return;
-        
-//                               Navigator.pushReplacementNamed(context, SystemRoutes.wellcomePage);
-        
-//                             }, 
-//                             icon: SystemIcons.logout_box_line,
-//                             color: SystemColors.white,
-//                           ),
-//                         ),
-//                       ],
-//                     ),
-//                     Column(
-//                       children: [
-//                         SystemAvatar(
-//                           size: SystemSize.extraLarge,
-//                           imageUrl: user?.moodlePhoto,
-//                         ),
-//                         Padding(
-//                           padding: EdgeInsets.only(
-//                             top: SystemSpacing.x2.value,
-//                           ),
-//                           child: Text('Olá, ${user?.firstName ?? ''}!').heading2(
-//                             fontWeight: SystemFontWeight.semiBold,
-//                             color: SystemColors.white,
-//                           ),
-//                         ),
-//                         if(showInput)
-//                           Padding(
-//                             padding: EdgeInsets.only(
-//                               top: SystemSpacing.x2.value,
-//                               right: SystemSpacing.x2.value,
-//                               left: SystemSpacing.x2.value,
-//                             ),
-//                             child: SystemInput(
-//                               hint: '••••••••••',
-//                               enable: true,
-//                               autofocus: true,
-//                               fillColor: SystemColors.white,
-//                               //controller: controller.passwordCtrl,
-//                               isPassword: true,
-//                               textInputType: TextInputType.text,
-//                               onChanged: (value) {
-//                                 //controller.setStatus(Status.success);
-//                               },
-//                             ),
-//                           ),
-//                         SizedBox(
-//                           height: SystemSpacing.x9.value,
-//                         )
-//                       ],
-//                     ),
-//                     Row(
-//                       mainAxisAlignment: MainAxisAlignment.center,
-//                       children: [
-//                         Padding(
-//                           padding: EdgeInsets.only(
-//                             left: SystemSpacing.x2.value,
-//                             right: SystemSpacing.x2.value,
-//                             bottom: SystemSpacing.x5.value
-//                           ),
-//                           child: const Text(
-//                             'Toque para desbloquear.',
-//                           ).body2(
-//                             color: SystemColors.white,
-//                           ),
-//                         )
-//                       ],
-//                     ),
-//                   ],
-//                 ),
-//               )
-//             )
-//           ],
-//         ),
