@@ -82,14 +82,14 @@ extension SystemFont on Text {
         style: (defaultStyle));
   }
 
-  Text heading3({SystemColors? color, SystemFontWeight? fontWeight}) {
+  Text heading3({Color? color, SystemFontWeight? fontWeight}) {
     final defaultStyle = TextStyle(
       decoration: TextDecoration.none,
       fontFamily: 'Inter',
       fontWeight: fontWeight?.value ?? SystemFontWeight.regular.value,
       fontSize: 24,
       fontStyle: FontStyle.normal,
-      color: color?.value ?? SystemColors.neutral800.value,
+      color: color ?? SystemColors.neutral800.value,
     );
     return Text(data!,
         maxLines: maxLines,
@@ -115,7 +115,7 @@ extension SystemFont on Text {
   }
 
   Text body1(
-      {SystemColors? color,
+      {Color? color,
       SystemFontWeight? fontWeight,
       SystemTextDecoration? decoration}) {
     assert(fontWeight != SystemFontWeight.semiBold,
@@ -127,7 +127,7 @@ extension SystemFont on Text {
       fontWeight: fontWeight?.value ?? SystemFontWeight.regular.value,
       fontSize: 16,
       fontStyle: FontStyle.normal,
-      color: color?.value ?? SystemColors.neutral800.value,
+      color: color ?? SystemColors.neutral800.value,
     );
     return Text(data!,
         maxLines: maxLines,
@@ -137,7 +137,7 @@ extension SystemFont on Text {
   }
 
   Text body2(
-      {SystemColors? color,
+      {Color? color,
       SystemFontWeight? fontWeight,
       SystemTextDecoration? decoration}) {
     assert(fontWeight != SystemFontWeight.semiBold,
@@ -149,7 +149,7 @@ extension SystemFont on Text {
       fontWeight: fontWeight?.value ?? SystemFontWeight.regular.value,
       fontSize: 14,
       fontStyle: FontStyle.normal,
-      color: color?.value ?? SystemColors.neutral800.value,
+      color: color ?? SystemColors.neutral800.value,
     );
     return Text(data!,
         maxLines: maxLines,

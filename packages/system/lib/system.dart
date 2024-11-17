@@ -17,3 +17,4 @@ export 'package:provider/provider.dart';
 export 'package:provider/single_child_widget.dart';
 export 'package:url_launcher/url_launcher.dart';
 export 'package:permission_handler/permission_handler.dart';
+export 'package:dio/dio.dart';

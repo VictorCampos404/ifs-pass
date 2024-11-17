@@ -125,7 +125,8 @@ class _HomePageState extends State<HomePage> {
                                               hint: '••••••••••',
                                               enable: true,
                                               autofocus: true,
-                                              fillColor: SystemColors.white,
+                                              fillColor:
+                                                  SystemColors.white.value,
                                               controller: wellcomeController
                                                   .passwordCtrl,
                                               isPassword: true,
@@ -176,7 +177,7 @@ class _HomePageState extends State<HomePage> {
                                     child: const Text(
                                       'Toque para desbloquear.',
                                     ).body2(
-                                      color: SystemColors.white,
+                                      color: SystemColors.white.value,
                                     ),
                                   )
                                 ],

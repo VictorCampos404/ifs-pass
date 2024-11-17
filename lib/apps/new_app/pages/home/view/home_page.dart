@@ -14,7 +14,7 @@ class NewAppHomePage extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: SystemColors.primary.value,
             title: const Text('NewApp').heading3(
-              color: SystemColors.white,
+              color: SystemColors.white.value,
             ),
             foregroundColor: SystemColors.white.value,
           ),

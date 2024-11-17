@@ -91,7 +91,7 @@ class SystemPrimaryButton extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                       ).body1(
                         fontWeight: SystemFontWeight.medium,
-                        color: textColor ?? SystemColors.white,
+                        color: textColor?.value ?? SystemColors.white.value,
                       ),
           ),
         ),
