@@ -53,12 +53,12 @@ class _ChatInputState extends State<ChatInput> {
                           SystemSpacing.x1.value,
                         ),
                         decoration: BoxDecoration(
-                          color: AiColors.text,
+                          color: SystemColors.primary.value,
                           borderRadius: BorderRadius.circular(20),
                         ),
                         child: Text(controller.areas[i]).body1(
                           fontWeight: SystemFontWeight.medium,
-                          color: AiColors.purple,
+                          color: SystemColors.white.value,
                         ),
                       ),
                     ),
@@ -83,7 +83,6 @@ class _ChatInputState extends State<ChatInput> {
                         SystemInput(
                           focusNode: inputFocus,
                           hint: 'Digite uma área de interesse...',
-                          fillColor: AiColors.purple.withOpacity(0.5),
                           controller: controller.inputCtrl,
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
@@ -104,8 +103,22 @@ class _ChatInputState extends State<ChatInput> {
                     icon: Icon(
                       SystemIcons.send_plane_2_fill.value,
                       color: controller.sendButtonEnable
-                          ? AiColors.purple
-                          : AiColors.purple.withOpacity(0.5),
+                          ? SystemColors.primary.value
+                          : SystemColors.primary.value.withOpacity(0.5),
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {
+                      if(!controller.isloading){
+                        controller.reset();
+                      }
+                    },
+                    icon: Icon(
+                      SystemIcons.brush_3_fill.value,
+                      color: !controller.isloading
+                          ? SystemColors.primary.value
+                          : SystemColors.primary.value.withOpacity(0.5),
+                       
                     ),
                   ),
                 ],

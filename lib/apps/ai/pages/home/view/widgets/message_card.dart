@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:ifs_pass/apps/ai/consts/colors.dart';
 import 'package:ifs_pass/apps/ai/pages/home/model/message.dart';
 import 'package:system_design_package/system_design.dart';
 
@@ -25,7 +24,7 @@ class MessageCard extends StatelessWidget {
         child: Container(
           padding: EdgeInsets.all(SystemSpacing.x1.value),
           decoration: BoxDecoration(
-            color: AiColors.text,
+            color: SystemColors.primary.value,
             borderRadius: BorderRadius.circular(
               20,
             ),
@@ -44,7 +43,7 @@ class MessageCard extends StatelessWidget {
                     top: 2,
                   ),
                   child: Text(message.label ?? '').body2(
-                    color: AiColors.purple,
+                    color: SystemColors.white.value,
                   ),
                 ),
                 Padding(
@@ -54,7 +53,7 @@ class MessageCard extends StatelessWidget {
                   ),
                   child: Icon(
                     SystemIcons.user_6_fill.value,
-                    color: AiColors.purple,
+                    color: SystemColors.white.value,
                   ),
                 )
               ],
@@ -78,7 +77,7 @@ class MessageCard extends StatelessWidget {
           Container(
             padding: EdgeInsets.all(SystemSpacing.x1.value),
             decoration: BoxDecoration(
-              color: AiColors.text,
+              color: SystemColors.primary.value,
               borderRadius: BorderRadius.circular(
                 20,
               ),
@@ -86,7 +85,7 @@ class MessageCard extends StatelessWidget {
             alignment: Alignment.center,
             child: Icon(
               SystemIcons.robot_fill.value,
-              color: AiColors.purple,
+              color: SystemColors.white.value,
             ),
           ),
           if ((message.label ?? '').isEmpty)
@@ -96,7 +95,7 @@ class MessageCard extends StatelessWidget {
                 left: SystemSpacing.x1.value,
               ),
               decoration: BoxDecoration(
-                color: AiColors.text,
+                color: SystemColors.neutral200.value,
                 borderRadius: BorderRadius.circular(
                   20,
                 ),
@@ -104,12 +103,12 @@ class MessageCard extends StatelessWidget {
               width: 80,
               height: 40,
               alignment: Alignment.center,
-              child: const SizedBox(
+              child: SizedBox(
                 height: 24,
                 width: 24,
                 child: CircularProgressIndicator(
                   strokeWidth: 0.5,
-                  color: AiColors.purple,
+                  color: SystemColors.primary.value,
                 ),
               ),
             )
@@ -124,7 +123,7 @@ class MessageCard extends StatelessWidget {
                 maxWidth: MediaQuery.of(context).size.width * 0.6,
               ),
               child: Text(message.label ?? '').body2(
-                color: AiColors.purple,
+                color: SystemColors.neutral800.value,
               ),
             )
         ],

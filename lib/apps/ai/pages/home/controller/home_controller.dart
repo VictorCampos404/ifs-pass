@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ifs_pass/apps/ai/pages/home/model/message.dart';
 import 'package:system_package/system.dart';
+import 'package:google_generative_ai/google_generative_ai.dart';
 
 class AiHomeController extends BaseStatus {
   TextEditingController inputCtrl = TextEditingController();
@@ -66,54 +67,54 @@ class AiHomeController extends BaseStatus {
 
     setStatus(Status.loading);
     try {
-      final Dio dio = Dio(
-          // BaseOptions(baseUrl: 'https://generativelanguage.googleapis.com'),
-          );
+      // final Dio dio = Dio(
+      //     // BaseOptions(baseUrl: 'https://generativelanguage.googleapis.com'),
+      //     );
 
-      final response = await dio.post(
-        'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key=AIzaSyBcCEhBm5garHVURyp17U-Wf7BLPjhpdzI',
-        // queryParameters: {
-        //   'key': 'AIzaSyBcCEhBm5garHVURyp17U-Wf7BLPjhpdzI',
-        // },
-        options: Options(
-          headers: {
-            "Content-Type": "application/json",
-          },
-        ),
-        data: {
-          "contents": [
-            {
-              "parts": [
-                {
-                  "text":
-                      "LList 5 popular cookie recipes using this JSON schema: \{ \"type\": \"object\", \"properties\": \{ \"topic\": \{ \"type\": \"string\" \},\}\}"
-                }
-              ]
-            }
-          ],
-          "generationConfig": {
-            "response_mime_type": "application/json",
-          }
-        },
-      );
-
-      // const apiKey = 'AIzaSyD8b0z1lsEVlqo4dYHKX4Ddc0wDRjVGVew';
-      // final model = GenerativeModel(
-      //   model: 'gemini-1.5-flash',
-      //   apiKey: apiKey,
+      // final response = await dio.post(
+      //   'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key=AIzaSyBcCEhBm5garHVURyp17U-Wf7BLPjhpdzI',
+      //   // queryParameters: {
+      //   //   'key': 'AIzaSyBcCEhBm5garHVURyp17U-Wf7BLPjhpdzI',
+      //   // },
+      //   options: Options(
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //     },
+      //   ),
+      //   data: {
+      //     "contents": [
+      //       {
+      //         "parts": [
+      //           {
+      //             "text":
+      //                 "Liste os topicos necessarios para aprender $text, sem descricao, apenas os topicos listados em ordem logica"
+      //           }
+      //         ]
+      //       }
+      //     ],
+      //     "generationConfig": {
+      //       "response_mime_type": "application/json",
+      //     }
+      //   },
       // );
 
-      // final content = [
-      //   Content.text(
-      //     'Liste os topicos necessarios para aprender $text, sem descricao, apenas os topicos listados em ordem logica',
-      //   )
-      // ];
+      const apiKey = 'AIzaSyBcCEhBm5garHVURyp17U-Wf7BLPjhpdzI';
+      final model = GenerativeModel(
+        model: 'gemini-1.5-flash',
+        apiKey: apiKey,
+      );
 
-      // final response = await model.generateContent(content);
+      final content = [
+        Content.text(
+          'Liste os topicos necessarios para aprender $text, sem descricao, apenas os topicos listados em ordem logica',
+        )
+      ];
+
+      final response = await model.generateContent(content);
 
       _messages.last = Message(
         isUser: false,
-        label: response.data?.toString() ??
+        label: response.text ??
             'Erro ao gerar resposta, tente novamente mais tarde.s',
       );
 

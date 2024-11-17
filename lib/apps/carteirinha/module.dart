@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:system_design_package/system_design.dart';
 import 'package:system_package/system.dart';
-import 'package:ifs_pass/apps/ai/consts/routes.dart';
-import 'package:ifs_pass/apps/ai/pages/home/controller/home_controller.dart';
-import 'package:ifs_pass/apps/ai/pages/home/view/home_page.dart';
+import 'package:ifs_pass/apps/carteirinha/consts/routes.dart';
+import 'package:ifs_pass/apps/carteirinha/pages/home/controller/home_controller.dart';
+import 'package:ifs_pass/apps/carteirinha/pages/home/view/home_page.dart';
 
-class AiModule implements SystemAppModule {
+class CarteirinhaModule implements SystemAppModule {
   @override
   List<SingleChildWidget> get providers => [
         ChangeNotifierProvider(
-          create: (_) => AiHomeController(),
+          create: (_) => CarteirinhaHomeController(),
         ),
       ];
 
   @override
   Map<String, Widget Function(BuildContext)> get routes => {
-        AiRoutes.home: (context) => const AiHomePage(),
+        CarteirinhaRoutes.home: (context) => const CarteirinhaHomePage(),
       };
 
   @override
-  String get id => 'ai';
+  String get id => 'carteirinha';
 
   @override
-  String get name => 'Ifsp Ai';
+  String get name => 'Carteirinha';
 
   @override
-  String get startRoute => AiRoutes.home;
+  String get startRoute => CarteirinhaRoutes.home;
 
   @override
   bool get active => true;
@@ -40,7 +40,7 @@ class AiModule implements SystemAppModule {
   Color? get colorIcon => SystemColors.primary.value;
 
   @override
-  IconData? get icon => SystemIcons.robot_fill.value;
+  IconData? get icon => SystemIcons.pass_valid_fill.value;
 
   @override
   bool? get glass => null;
