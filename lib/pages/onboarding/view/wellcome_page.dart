@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:system_design_package/system_design.dart';
 import 'package:system_package/system.dart';
 
@@ -15,7 +16,6 @@ class WellcomePage extends StatelessWidget {
             SystemSpacing.x4.value,
           ),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
                 children: [
@@ -29,15 +29,20 @@ class WellcomePage extends StatelessWidget {
                       top: SystemSpacing.x4.value,
                     ),
                     child: const Text(
-                      "Bem Vindo(a)",
+                      "Bem-vindo(a) ao IFSP App! 🎓",
+                      textAlign: TextAlign.center,
                     ).heading1(),
                   ),
                 ],
               ),
-              const Text(
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-                textAlign: TextAlign.center,
-              ).body2(),
+              Expanded(
+                child: Center(
+                  child: const Text(
+                    "Seu espaço digital para facilitar a rotina acadêmica e estar conectado(a) ao Instituto Federal de São Paulo!\n\nAcompanhe suas aulas, notas, eventos e muito mais, de forma simples e prática.",
+                    textAlign: TextAlign.center,
+                  ).body2(),
+                ),
+              ),
               SystemPrimaryButton(
                 text: "Começar",
                 onTap: () {
