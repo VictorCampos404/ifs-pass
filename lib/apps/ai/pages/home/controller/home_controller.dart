@@ -67,38 +67,8 @@ class AiHomeController extends BaseStatus {
 
     setStatus(Status.loading);
     try {
-      // final Dio dio = Dio(
-      //     // BaseOptions(baseUrl: 'https://generativelanguage.googleapis.com'),
-      //     );
 
-      // final response = await dio.post(
-      //   'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro-latest:generateContent?key=AIzaSyBcCEhBm5garHVURyp17U-Wf7BLPjhpdzI',
-      //   // queryParameters: {
-      //   //   'key': 'AIzaSyBcCEhBm5garHVURyp17U-Wf7BLPjhpdzI',
-      //   // },
-      //   options: Options(
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //   ),
-      //   data: {
-      //     "contents": [
-      //       {
-      //         "parts": [
-      //           {
-      //             "text":
-      //                 "Liste os topicos necessarios para aprender $text, sem descricao, apenas os topicos listados em ordem logica"
-      //           }
-      //         ]
-      //       }
-      //     ],
-      //     "generationConfig": {
-      //       "response_mime_type": "application/json",
-      //     }
-      //   },
-      // );
-
-      const apiKey = 'AIzaSyBcCEhBm5garHVURyp17U-Wf7BLPjhpdzI';
+      const apiKey = 'AIzaSyDa1CxCR_rOrzg1q__EatlOaxfzgsXz2d8';
       final model = GenerativeModel(
         model: 'gemini-1.5-flash',
         apiKey: apiKey,
