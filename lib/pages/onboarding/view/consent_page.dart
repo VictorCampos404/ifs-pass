@@ -19,6 +19,7 @@ class _ConsentPageState extends State<ConsentPage> {
       _,
     ) {
       return Scaffold(
+        backgroundColor: SystemColors.white.value,
         body: SafeArea(
           child: Padding(
             padding: EdgeInsets.all(
@@ -52,7 +53,7 @@ class _ConsentPageState extends State<ConsentPage> {
                         isChecked:
                             controller.haveAccount || controller.allowTerms,
                         text:
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+                            "Eu concordo em permitir que o sistema acesse meus dados básicos do Moodle para criar minha conta, ciente de que nenhuma senha será armazenada e meus dados estarão protegidos.",
                         onChanged: (value) {
                           if (controller.haveAccount) return;
 
